@@ -1,0 +1,36 @@
+/* Cool To This General */
+
+h1, h2, h3, h4, h5, h6, button.keyword, button.link a {
+    color: blue;
+    font-family:PT Sans, Verdana, Geneva, Tahoma, sans-serif;
+    bottom: inherit;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Import Fonts */
+
+@font-face {
+    font-family: PT Sans Bold;
+    src: url(PTSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: PT Sans;
+    src: url(PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: PT Sans Italic;
+    src: url(PTSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: PT Sans Bold Italic;
+    src: url(PTSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: Open sans bold;
+    src: url(OpenSans-Bold.ttf);
+}
