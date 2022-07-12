@@ -5,3 +5,5 @@ function Game() {
     this.aLevel = new Decimal(0)
     this.getA = (level) => new Decimal(level).sqrt()
 }
+
+game = new Game();
