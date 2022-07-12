@@ -3,8 +3,19 @@ document.getElementById("click").onclick = () => {
     document.getElementById("tear").innerHTML = "You Have " + game.tear + " Tear."
 }
 
+document.getElementById("cost1").onclick = () => {
+    if (game.tear.gte(game.cost1)) {
+        game.tear = game.tear.sub(game.cost1)
+    }
+}
+
 function UpdateGameArea() {
     document.getElementById("sqrt").innerText = game.aLevel
+
+    /**
+     * Get Addiontal Per Second.
+     */
+    game.tear = game.tear.add(game.tps)
 
     document.getElementById("tear").innerHTML = "You Have " + game.tear + " Tear."
 }
