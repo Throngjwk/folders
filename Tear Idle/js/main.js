@@ -21,5 +21,11 @@ function UpdateGameArea() {
 }
 
 document.body.style.fontSize = "2.2vh"
+document.getElementById("click").style.backgroundColor = "yellow"
+document.getElementById("click").style.fontFamily = "Comic Sans MS"
+document.getElementById("click").style.bottom = "inherit"
+document.getElementById("cost1").style.backgroundColor = "yellow"
+document.getElementById("cost1").style.fontFamily = "Comic Sans MS"
+document.getElementById("cost1").style.bottom = "inherit"
 
 setInterval(UpdateGameArea, 100)
