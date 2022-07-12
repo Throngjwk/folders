@@ -1,3 +1,3 @@
 document.getElementById("click").onclick = () => {
-    game.coins = game.coin.add(1)
+    game.tear = game.tear.add(1)
 }
