@@ -9,6 +9,6 @@ function UpdateGameArea() {
     document.getElementById("tear").innerHTML = "You Have " + game.tear + " Tear."
 }
 
-document.body.style.fontSize = "5.5vh"
+document.body.style.fontSize = "2.2vh"
 
 setInterval(UpdateGameArea, 100)
