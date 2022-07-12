@@ -6,6 +6,7 @@ document.getElementById("click").onclick = () => {
 document.getElementById("cost1").onclick = () => {
     if (game.tear.gte(game.cost1)) {
         game.tear = game.tear.sub(game.cost1)
+        game.aLevel = game.aLevel.add(1)
     }
 }
 
@@ -16,6 +17,8 @@ function UpdateGameArea() {
      * Get Addiontal Per Second.
      */
     game.tear = game.tear.add(game.tps)
+
+    game.tps = game.getA(game.aLevel)
 
     document.getElementById("tear").innerHTML = "You Have " + game.tear + " Tear."
 }
