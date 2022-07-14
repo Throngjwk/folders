@@ -6,7 +6,8 @@ let version = "1.0.0"
 var rho = new Decimal(0)
 let tau = new Decimal(0)
 var cost1 = new Decimal(15)
-let expo = new Decimal(1);
+var cost2 = new Decimal(3e3)
+let expo1 = new Decimal(1);
 
 function Tick() {
     rho = rho.add(c1.pow(expo).times(c2))
@@ -56,10 +57,19 @@ document.getElementById("cost1").onclick = () => {
     }
 }
 
+document.getElementById("cost2").onclick = () => {
+    if (rho.gte(cost2)) {
+        CostsDefine(cost2)
+        cost2 = cost2.mul(2)
+        c2 = c2.add(1)
+        document.getElementById("cn2").innerText = cost2;
+    }
+}
+
 document.getElementById("mc1").onclick = () =>{
     if (rho.gte(1e25)) {
         CostsDefine(new Decimal(1e25))
-        expo = expo.add(0.05)
+        expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo;
     }
@@ -68,7 +78,7 @@ document.getElementById("mc1").onclick = () =>{
 document.getElementById("mc2").onclick = () =>{
     if (rho.gte(1e50)) {
         CostsDefine(new Decimal(1e50))
-        expo = expo.add(0.05)
+        expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo;
     }
@@ -77,7 +87,7 @@ document.getElementById("mc2").onclick = () =>{
 document.getElementById("mc3").onclick = () =>{
     if (rho.gte(1e75)) {
         CostsDefine(new Decimal(1e75))
-        expo = expo.add(0.05)
+        expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo;
     }
