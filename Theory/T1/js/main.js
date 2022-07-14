@@ -7,10 +7,11 @@ var rho = new Decimal(0)
 let tau = new Decimal(0)
 var cost1 = new Decimal(15)
 var cost2 = new Decimal(3e3)
+var cost3 = new Decimal(1e4)
 let expo1 = new Decimal(1);
 
 function Tick() {
-    rho = rho.add(c1.pow(expo1).times(c2))
+    rho = rho.add(c1.pow(expo1).times(c2).times(c3))
     tau = rho;
 }
 
@@ -60,9 +61,18 @@ document.getElementById("cost1").onclick = () => {
 document.getElementById("cost2").onclick = () => {
     if (rho.gte(cost2)) {
         CostsDefine(cost2)
-        cost2 = cost2.mul(2)
-        c2 = c2.add(1)
+        cost2 = cost2.mul(new Decimal.pow(2, Math.log2(10)))
+        c2 = c2.mul(2)
         document.getElementById("cn2").innerText = cost2;
+    }
+}
+
+document.getElementById("cost3").onclick = () => {
+    if (rho.gte(cost3)) {
+        CostsDefine(cost3)
+        cost3 = cost3.mul(new Decimal.pow(2, 4.5 * Math.log2(10)))
+        c2 = c2.mul(2)
+        document.getElementById("cn3").innerText = cost3;
     }
 }
 
