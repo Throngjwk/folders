@@ -81,7 +81,7 @@ document.getElementById("mc1").onclick = () =>{
         CostsDefine(new Decimal(1e25))
         expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
-        document.getElementById("c1expo").innerHTML = expo;
+        document.getElementById("c1expo").innerHTML = expo1;
     }
 }
 
@@ -90,7 +90,7 @@ document.getElementById("mc2").onclick = () =>{
         CostsDefine(new Decimal(1e50))
         expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
-        document.getElementById("c1expo").innerHTML = expo;
+        document.getElementById("c1expo").innerHTML = expo1;
     }
 }
 
@@ -99,7 +99,7 @@ document.getElementById("mc3").onclick = () =>{
         CostsDefine(new Decimal(1e75))
         expo1 = expo1.add(0.05)
         document.getElementById("c1expo").style.display = "block";
-        document.getElementById("c1expo").innerHTML = expo;
+        document.getElementById("c1expo").innerHTML = expo1;
     }
 }
 
