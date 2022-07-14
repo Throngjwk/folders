@@ -5,10 +5,18 @@ var c4 = new Decimal(1)
 let version = "1.0.0"
 var rho = new Decimal(0)
 let tau = new Decimal(0)
+var cost1 = new Decimal(15)
 
 function Tick() {
     rho = rho.add(c1.times(c2))
     tau = rho;
+}
+
+document.getElementById("cost1").onclick = () => {
+    if (rho.gte(cost1)) {
+        cost1 = cost1.mul(2)
+        c1 = c1.add(1)
+    }
 }
 
 setInterval(() => {
