@@ -103,6 +103,21 @@ document.getElementById("mc3").onclick = () =>{
     }
 }
 
+document.getElementById("mc4").onclick = () =>{
+    if (rho.gte(1e8)) {
+        CostsDefine(new Decimal(1e8))
+        document.getElementById("c3term").style.display = "block";
+        document.getElementById("cost3").style.display = "block";
+    }
+}
+
+document.getElementById("mc5").onclick = () =>{
+    if (rho.gte(1e12)) {
+        CostsDefine(new Decimal(1e12))
+        document.getElementById("logterm").style.display = "block";
+    }
+}
+
 setInterval(() => {
     document.getElementById("title").innerHTML = "Theory 1:" + rho + " &rho;"
     Tick();
