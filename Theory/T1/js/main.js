@@ -118,6 +118,8 @@ document.getElementById("mc5").onclick = () =>{
     }
 }
 
+document.getElementById("cost3").style.display = "none"
+
 setInterval(() => {
     document.getElementById("title").innerHTML = "Theory 1:" + rho + " &rho;"
     Tick();
