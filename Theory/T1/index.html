@@ -12,7 +12,7 @@
     <h4 class="primary equaltion">&rho;<sub>n + 1</sub> = &rho;<sub>n</sub> + c<sub>1</sub><sup style="display: none;" id="c1expo"></sup><span style="display: none;" id="logterm">(1+ ln(&rho;<sub>n</sub>) / 100)</span><span style="display: none;" id="c3term">c<sub>3</sub>&rho;<sub>n - 1</sub><sup>0.2</sup></span><span style="display: none;" id="c4term">c<sub>3</sub>&rho;<sub>n - 1</sub><sup>0.2</sup></span></h4>
     <h4 class="secondary equaltion">&tau; = max &rho;</h4>
     <button style="font-family: sans-serif;background-color: turquoise;" id="cost1">Cost:<span id="cn1">15</span> &rho; (c<sub>1</sub> = <span id="number"></span>)</button>
-    <button style="font-family: sans-serif;background-color: turquoise;" id="cost2">Cost:<span id="cn2">3000</span> &rho; (c<sub>1</sub> = <span id="number"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost2">Cost:<span id="cn2">3000</span> &rho; (c<sub>1</sub> = <span id="number2"></span>)</button>
     <h3>Milestone Upgrades</h3>
     <button id="mc1" class="milestone-upgrade">Cost:1e25 &rho;</button>
     <button id="mc2" class="milestone-upgrade">Cost:1e50 &rho;</button>
@@ -23,6 +23,7 @@
 <script>
     setInterval(() => {
         document.getElementById("number").innerText = c1;
+        document.getElementById("number2").innerText = c2;
     }, 400);
 </script>
 <link rel="stylesheet" href="css/main.css">
