@@ -40,7 +40,7 @@ function Tick() {
  *   display:block;
  * }
  * ```
- * @param {Function} number a define function.
+ * @param {any} number a define function.
  */
 function CostsDefine(number) {
     rho = rho.sub(number)
