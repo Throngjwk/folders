@@ -50,7 +50,7 @@ document.getElementById("cost1").onclick = () => {
     if (rho.gte(cost1)) {
         cost1 = cost1.mul(2)
         c1 = c1.add(1)
-        CostsDefine()
+        CostsDefine(cost1)
         document.getElementById("cn1").innerText = cost1;
     }
 }
