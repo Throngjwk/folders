@@ -71,7 +71,7 @@ document.getElementById("cost3").onclick = () => {
     if (rho.gte(cost3)) {
         CostsDefine(cost3)
         cost3 = cost3.mul(new Decimal.pow(2, 4.5 * Math.log2(10)))
-        c2 = c2.mul(2)
+        c3 = c3.mul(10)
         document.getElementById("cn3").innerText = cost3;
     }
 }
