@@ -12,10 +12,53 @@ function Tick() {
     tau = rho;
 }
 
+/**
+ * - A define function.
+ * 
+ * costs than subtract this game.
+ * 
+ * ## Subtracting
+ * when do specting for expample:
+ * ```js
+ * CostsDefine(new Decimal(10))
+ * ```
+ * 
+ * ## Select Upgrade
+ * ```js
+ * CostsDefine(cost1)
+ * ```
+ * 
+ * ### Need to active
+ * ```html
+ * <button id="cost1" class="upgrade">Cost:20</button>
+ * ```
+ * 
+ * ## Create Styles
+ * ```css
+ * button.myupgrade {
+ *   background-color: yellow;
+ *   display:block;
+ * }
+ * ```
+ * @param {Function} number a define function.
+ */
+function CostsDefine(number) {
+    rho = rho.sub(number)
+}
+
 document.getElementById("cost1").onclick = () => {
     if (rho.gte(cost1)) {
         cost1 = cost1.mul(2)
         c1 = c1.add(1)
+        CostsDefine()
+        document.getElementById("cn1").innerText = cost1;
+    }
+}
+
+document.getElementById("mc1").onclick = () =>{
+    if (rho.gte(1e25)) {
+        CostsDefine(new Decimal(1e25))
+        document.getElementById("c1expo").style.display = "block";
     }
 }
 
