@@ -137,6 +137,7 @@ document.getElementById("mc6").onclick = () =>{
 }
 
 document.getElementById("cost3").style.display = "none"
+document.getElementById("cost4").style.display = "none"
 
 setInterval(() => {
     document.getElementById("title").innerHTML = "Theory 1:" + rho + " &rho;"
