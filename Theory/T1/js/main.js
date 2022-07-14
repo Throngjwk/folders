@@ -10,7 +10,7 @@ var cost2 = new Decimal(3e3)
 let expo1 = new Decimal(1);
 
 function Tick() {
-    rho = rho.add(c1.pow(expo).times(c2))
+    rho = rho.add(c1.pow(expo1).times(c2))
     tau = rho;
 }
 
