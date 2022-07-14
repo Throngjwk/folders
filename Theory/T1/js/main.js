@@ -79,7 +79,7 @@ document.getElementById("cost3").onclick = () => {
 document.getElementById("mc1").onclick = () =>{
     if (rho.gte(1e25)) {
         CostsDefine(new Decimal(1e25))
-        expo1 = expo1.add(0.05)
+        expo1 = new Decimal(1.05)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo1;
     }
@@ -88,7 +88,7 @@ document.getElementById("mc1").onclick = () =>{
 document.getElementById("mc2").onclick = () =>{
     if (rho.gte(1e50)) {
         CostsDefine(new Decimal(1e50))
-        expo1 = expo1.add(0.05)
+        expo1 = new Decimal(1.1)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo1;
     }
@@ -97,7 +97,7 @@ document.getElementById("mc2").onclick = () =>{
 document.getElementById("mc3").onclick = () =>{
     if (rho.gte(1e75)) {
         CostsDefine(new Decimal(1e75))
-        expo1 = expo1.add(0.05)
+        expo1 = new Decimal(1.15)
         document.getElementById("c1expo").style.display = "block";
         document.getElementById("c1expo").innerHTML = expo1;
     }
