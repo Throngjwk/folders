@@ -9,3 +9,6 @@ var dotr2 = new Decimal(0)
 var dotr3 = new Decimal(0)
 var dotr4 = new Decimal(0)
 
+setInterval(() => {
+    document.getElementById("rhotau").innerHTML = rho + " &rho;, "  + tau + " &tau;"
+}, 100);
