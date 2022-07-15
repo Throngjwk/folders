@@ -26,6 +26,15 @@ document.getElementById("cost1").onclick = () => {
     }
 }
 
+document.getElementById("cost2").onclick = () => {
+    if (rho.gte(cost2)) {
+        rho = rho.sub(cost2)
+        cost2 = cost2.times(new Decimal.pow(2, Math.log2(2)))
+        dotq2 = dotq2.add(1)
+        document.getElementById("cn2").innerText = cost2;
+    }
+}
+
 setInterval(() => {
     rho = rho.add(dotq1)
     dotq1 = dotq1.add(dotq2)
