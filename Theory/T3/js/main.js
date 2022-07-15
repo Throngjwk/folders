@@ -5,6 +5,9 @@ var tau = new Decimal(0)
 var b1 = new Decimal(1)
 var b2 = new Decimal(0)
 var b3 = new Decimal(0)
+var cost1 = new Decimal(10)
+var cost2 = new Decimal(10)
+var cost3 = new Decimal(3e3)
 
 document.getElementById("cost1").onclick = () => {
     if (currency1.gte(cost1)) {
