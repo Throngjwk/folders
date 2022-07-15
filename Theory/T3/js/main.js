@@ -17,4 +17,7 @@ document.getElementById("cost1").onclick = () => {
 
 setInterval(() => {
     currnecy1 = currency1.add(b1.times(b2).times(b3))
+    document.getElementById("currency1").innerText = currency1;
+    document.getElementById("currency2").innerText = currency2;
+    document.getElementById("currency3").innerText = currency3;
 }, 1000);
