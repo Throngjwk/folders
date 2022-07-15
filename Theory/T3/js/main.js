@@ -19,8 +19,8 @@ document.getElementById("cost1").onclick = () => {
 }
 
 document.getElementById("cost2").onclick = () => {
-    if (currency1.gte(cost2)) {
-        currency1 = currency1.sub(cost2)
+    if (currency2.gte(cost2)) {
+        currency2 = currency2.sub(cost2)
         cost2 = cost2.times(new Decimal.pow(2, Math.log2(1.308)))
         b2 = b2.add(1)
         document.getElementById("cn2").innerText = cost2;
