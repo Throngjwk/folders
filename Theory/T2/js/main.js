@@ -20,6 +20,7 @@ var cost8 = new Decimal(5e50)
 document.getElementById("cost1").onclick = () => {
     if (rho.gte(cost1)) {
         rho = rho.sub(cost1)
+        cost = cost.times(new Decimal.pow(2, Math.log2(2)))
         dotq1 = dotq1.add(1)
         document.getElementById("cn1").innerText = cost1;
     }
