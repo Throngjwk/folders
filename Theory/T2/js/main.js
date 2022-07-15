@@ -1,13 +1,13 @@
 var rho = new Decimal(0);
 var tau = new Decimal(0)
 var dotq1 = new Decimal(1)
-var dotq2 = new Decimal(1)
-var dotq3 = new Decimal(1)
-var dotq4 = new Decimal(1)
+var dotq2 = new Decimal(0)
+var dotq3 = new Decimal(0)
+var dotq4 = new Decimal(0)
 var dotr1 = new Decimal(1)
-var dotr2 = new Decimal(1)
-var dotr3 = new Decimal(1)
-var dotr4 = new Decimal(1)
+var dotr2 = new Decimal(0)
+var dotr3 = new Decimal(0)
+var dotr4 = new Decimal(0)
 var cost1 = new Decimal(10)
 var cost2 = new Decimal(5e3)
 var cost3 = new Decimal(3e25)
@@ -38,14 +38,32 @@ document.getElementById("cost2").onclick = () => {
 document.getElementById("cost3").onclick = () => {
     if (rho.gte(cost3)) {
         rho = rho.sub(cost3)
-        cost3 = cost2.times(new Decimal.pow(2, Math.log2(3)))
+        cost3 = cost3.times(new Decimal.pow(2, Math.log2(3)))
         dotq3 = dotq3.add(1)
         document.getElementById("cn3").innerText = cost3;
     }
 }
 
+document.getElementById("cost4").onclick = () => {
+    if (rho.gte(cost4)) {
+        rho = rho.sub(cost4)
+        cost4 = cost4.times(new Decimal.pow(2, Math.log2(4)))
+        dotq4 = dotq4.add(1)
+        document.getElementById("cn4").innerText = cost4;
+    }
+}
+
+document.getElementById("cost5").onclick = () => {
+    if (rho.gte(cost5)) {
+        rho = rho.sub(cost5)
+        cost5 = cost5.times(new Decimal.pow(2, Math.log2(2)))
+        dotr1 = dotr1.add(1)
+        document.getElementById("cn5").innerText = cost5;
+    }
+}
+
 setInterval(() => {
-    rho = rho.add(dotq1)
+    rho = rho.add(dotq1.times(dotr1))
     dotq1 = dotq1.add(dotq2)
     dotq2 = dotq2.add(dotq3)
     dotq3 = dotq2.add(dotq4)
