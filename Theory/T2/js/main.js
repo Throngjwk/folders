@@ -146,6 +146,7 @@ document.getElementById("mc3").onclick = () =>{
 }
 
 setInterval(() => {
+    document.getElementById("title").innerHTML = "Theory 2:" + rho + " &rho;"
     rho = rho.add(dotq1.pow(expo1).times(dotr1.pow(expo2)))
     dotq1 = dotq1.add(dotq2)
     dotq2 = dotq2.add(dotq3)
