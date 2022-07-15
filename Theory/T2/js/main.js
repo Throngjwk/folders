@@ -35,6 +35,15 @@ document.getElementById("cost2").onclick = () => {
     }
 }
 
+document.getElementById("cost3").onclick = () => {
+    if (rho.gte(cost3)) {
+        rho = rho.sub(cost3)
+        cost3 = cost2.times(new Decimal.pow(2, Math.log2(3)))
+        dotq3 = dotq3.add(1)
+        document.getElementById("cn3").innerText = cost3;
+    }
+}
+
 setInterval(() => {
     rho = rho.add(dotq1)
     dotq1 = dotq1.add(dotq2)
