@@ -62,6 +62,33 @@ document.getElementById("cost5").onclick = () => {
     }
 }
 
+document.getElementById("cost6").onclick = () => {
+    if (rho.gte(cost6)) {
+        rho = rho.sub(cost6)
+        cost6 = cost6.times(new Decimal.pow(2, Math.log2(2)))
+        dotr2 = dotr2.add(1)
+        document.getElementById("cn6").innerText = cost6;
+    }
+}
+
+document.getElementById("cost7").onclick = () => {
+    if (rho.gte(cost7)) {
+        rho = rho.sub(cost7)
+        cost7 = cost7.times(new Decimal.pow(2, Math.log2(3)))
+        dotr3 = dotr3.add(1)
+        document.getElementById("cn7").innerText = cost7;
+    }
+}
+
+document.getElementById("cost8").onclick = () => {
+    if (rho.gte(cost8)) {
+        rho = rho.sub(cost8)
+        cost8 = cost8.times(new Decimal.pow(2, Math.log2(4)))
+        dotr4 = dotr4.add(1)
+        document.getElementById("cn8").innerText = cost8;
+    }
+}
+
 setInterval(() => {
     rho = rho.add(dotq1.times(dotr1))
     dotq1 = dotq1.add(dotq2)
