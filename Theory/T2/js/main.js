@@ -16,6 +16,8 @@ var cost5 = new Decimal(2e6)
 var cost6 = new Decimal(3e9)
 var cost7 = new Decimal(4e25)
 var cost8 = new Decimal(5e50)
+let expo1 = new Decimal(1)
+let expo2 = new Decimal(1)
 
 document.getElementById("cost1").onclick = () => {
     if (rho.gte(cost1)) {
@@ -89,8 +91,62 @@ document.getElementById("cost8").onclick = () => {
     }
 }
 
+document.getElementById("mc1").onclick = () =>{
+    if (rho.gte(1e25)) {
+        rho = rho.sub(1e25)
+        expo1 = new Decimal(1.05)
+        document.getElementById("q1expo").style.display = "block";
+        document.getElementById("q1expo").innerHTML = expo1;
+    }
+}
+
+document.getElementById("mc2").onclick = () =>{
+    if (rho.gte(1e50)) {
+        rho = rho.sub(1e50)
+        expo1 = new Decimal(1.1)
+        document.getElementById("q1expo").style.display = "block";
+        document.getElementById("q1expo").innerHTML = expo1;
+    }
+}
+
+document.getElementById("mc3").onclick = () =>{
+    if (rho.gte(1e75)) {
+        rho = rho.sub(1e75)
+        expo1 = new Decimal(1.15)
+        document.getElementById("q1expo").style.display = "block";
+        document.getElementById("q1expo").innerHTML = expo1;
+    }
+}
+
+document.getElementById("mc4").onclick = () =>{
+    if (rho.gte(1e25)) {
+        rho = rho.sub(1e25)
+        expo2 = new Decimal(1.05)
+        document.getElementById("r1expo").style.display = "block";
+        document.getElementById("r1expo").innerHTML = expo2;
+    }
+}
+
+document.getElementById("mc5").onclick = () =>{
+    if (rho.gte(1e50)) {
+        rho = rho.sub(1e50)
+        expo2 = new Decimal(1.1)
+        document.getElementById("r1expo").style.display = "block";
+        document.getElementById("r1expo").innerHTML = expo2;
+    }
+}
+
+document.getElementById("mc3").onclick = () =>{
+    if (rho.gte(1e75)) {
+        rho = rho.sub(1e75)
+        expo2 = new Decimal(1.15)
+        document.getElementById("r1expo").style.display = "block";
+        document.getElementById("r1expo").innerHTML = expo2;
+    }
+}
+
 setInterval(() => {
-    rho = rho.add(dotq1.times(dotr1))
+    rho = rho.add(dotq1.pow(expo1).times(dotr1.pow(expo2)))
     dotq1 = dotq1.add(dotq2)
     dotq2 = dotq2.add(dotq3)
     dotq3 = dotq3.add(dotq4)
