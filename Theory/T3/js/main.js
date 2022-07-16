@@ -13,7 +13,7 @@ var cost2 = new Decimal(10)
 var cost3 = new Decimal(3e3)
 var cost4 = new Decimal(20)
 var cost5 = new Decimal(10)
-var cost6 = new Decimal(10)
+var cost6 = new Decimal(1000)
 let dimesionLevel = 0;
 
 document.getElementById("cost1").onclick = () => {
