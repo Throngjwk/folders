@@ -27,6 +27,15 @@ document.getElementById("cost2").onclick = () => {
     }
 }
 
+document.getElementById("cost3").onclick = () => {
+    if (currency3.gte(cost3)) {
+        currency3 = currency3.sub(cost3)
+        cost3 = cost3.times(new Decimal.pow(2, Math.log2(1.675)))
+        b3 = b3.add(1)
+        document.getElementById("cn3").innerText = cost3;
+    }
+}
+
 setInterval(() => {
     currency1 = currency1.add(b1.times(b2.add(1)).times(b3.add(1)))
     currency2 = currency2.add(b1.times(b2.add(1)).times(b3.add(1)))
