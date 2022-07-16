@@ -7,11 +7,13 @@ var b2 = new Decimal(0)
 var b3 = new Decimal(0)
 var c11 = new Decimal(0)
 var c12 = new Decimal(0)
+var c13 = new Decimal(0)
 var cost1 = new Decimal(20)
 var cost2 = new Decimal(10)
 var cost3 = new Decimal(3e3)
 var cost4 = new Decimal(20)
 var cost5 = new Decimal(10)
+var cost6 = new Decimal(10)
 let dimesionLevel = 0;
 
 document.getElementById("cost1").onclick = () => {
@@ -56,6 +58,15 @@ document.getElementById("cost5").onclick = () => {
         cost5 = cost5.times(new Decimal.pow(2, Math.log2(2.74)))
         c12 = c12.add(1)
         document.getElementById("cn5").innerText = cost5;
+    }
+}
+
+document.getElementById("cost6").onclick = () => {
+    if (currency2.gte(cost6)) {
+        currency2 = currency2.sub(cost6)
+        cost6 = cost6.times(new Decimal.pow(2, Math.log2(1.965)))
+        c13 = c13.add(1)
+        document.getElementById("cn6").innerText = cost6;
     }
 }
 
