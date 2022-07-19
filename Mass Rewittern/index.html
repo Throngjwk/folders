@@ -24,6 +24,13 @@
             font-family: Arial;
             font-size: large;
         }
+
+        h2.title {
+            color: black;
+            cursor: default;
+            font-size: 3vh;
+            font-family: Arial;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +41,12 @@
     </h2>
     <h3 style="display: block;color:blue;cursor:default;" id="mass">You Have 0 Mass.</h3>
     <h3 style="display: none;color:yellow;cursor: default;" id="bigMars">You Have 0 Big Mass.</h3>
+    <h2 class="title">Settings</h2>
+    <h3 style="color: yellow;cursor: default;">Variable colors</h3>
+    <br>
+    <h3>Color 1 <input type="color" name="mass" id="massChange"> <button id="one">Update</button></h3>
+    <br>
+    <h3>Color 2 <input type="color" name="big mass" id="bigMassChange"> <button id="two">Update</button></h3>
 </body>
 </html>
 <script src="js/break_eternity.js"></script>
