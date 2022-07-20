@@ -1,3 +1,8 @@
+let mass = new Decimal(0)
+let bigMass = new Decimal(0)
+let mps = new Decimal(0)
+let mpc = new Decimal(1)
+
 x = document.getElementById("background")
 
 document.getElementById("setColor").onclick = () => {
