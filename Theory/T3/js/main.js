@@ -18,6 +18,11 @@ var cost5 = new Decimal(10)
 var cost6 = new Decimal(1000)
 let dimesionLevel = 0;
 
+function UnlockDimesion() {
+    dimesionLevel += 1
+    document.getElementById("dimesion").style.display = "block"
+}
+
 document.getElementById("cost1").onclick = () => {
     if (currency1.gte(cost1)) {
         currency1 = currency1.sub(cost1)
@@ -73,6 +78,16 @@ document.getElementById("cost6").onclick = () => {
         document.getElementById("cn6").innerText = cost6;
     }
 }
+
+document.getElementById("mc1").onclick = () =>{
+    if (currency1.gte(1e25)) {
+        UnlockDimesion()
+        document.getElementById("c1expo").style.display = "block";
+        document.getElementById("c1expo").innerHTML = expo1;
+    }
+}
+
+document.getElementById("cost6").style.display = "none"
 
 setInterval(() => {
     currency1 = currency1.add(b1.times(b2.add(1)).times(b3.add(1)))
