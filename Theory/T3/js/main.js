@@ -8,6 +8,8 @@ var b3 = new Decimal(0)
 var c11 = new Decimal(0)
 var c12 = new Decimal(0)
 var c13 = new Decimal(0)
+let c12Level = new Decimal(0)
+let c13Level = new Decimal(0)
 var cost1 = new Decimal(20)
 var cost2 = new Decimal(10)
 var cost3 = new Decimal(3e3)
@@ -47,7 +49,7 @@ document.getElementById("cost4").onclick = () => {
     if (currency1.gte(cost4)) {
         currency1 = currency1.sub(cost4)
         cost4 = cost4.times(new Decimal.pow(2, Math.log2(6.3496)))
-        c11 = c11.add(1)
+        c11 = c11.times(2)
         document.getElementById("cn4").innerText = cost4;
     }
 }
@@ -55,8 +57,9 @@ document.getElementById("cost4").onclick = () => {
 document.getElementById("cost5").onclick = () => {
     if (currency2.gte(cost5)) {
         currency2 = currency2.sub(cost5)
+        c12Level = c12Level.add(1)
         cost5 = cost5.times(new Decimal.pow(2, Math.log2(2.74)))
-        c12 = c12.add(1)
+        c12 = new Decimal.pow(2, c12Level).sub(1)
         document.getElementById("cn5").innerText = cost5;
     }
 }
@@ -64,8 +67,9 @@ document.getElementById("cost5").onclick = () => {
 document.getElementById("cost6").onclick = () => {
     if (currency2.gte(cost6)) {
         currency2 = currency2.sub(cost6)
+        c13Level = c13Level.add(1)
         cost6 = cost6.times(new Decimal.pow(2, Math.log2(1.965)))
-        c13 = c13.add(1)
+        c13 = new Decimal.pow(2, c13Level).sub(1)
         document.getElementById("cn6").innerText = cost6;
     }
 }
