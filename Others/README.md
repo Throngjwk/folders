@@ -25,3 +25,8 @@ document.getElementById("myupg").onclick = () => {
 | Name | Cost |
 |------|------|
 | Bakery | I Forgor upgrade. $10$ |
+
+## I SHOW
+$$
+a = 10^{b+1}
+$$
