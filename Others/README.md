@@ -23,4 +23,5 @@ document.getElementById("myupg").onclick = () => {
 ## Upgrades
 ## TABLES
 | Name | Cost |
+|------|------|
 | Bakery | I Forgor upgrade. $10$ |
