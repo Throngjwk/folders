@@ -12,6 +12,7 @@ button.circle {
     border-radius: 50%;
     width: 120px;
     height: 120px;
+    background-color: var(--alpha-color);
 }
 
 :root {
