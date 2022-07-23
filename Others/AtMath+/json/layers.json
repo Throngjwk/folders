@@ -7,6 +7,11 @@
             "resourceFormula":"a",
             "alphaReq":"25",
             "alphaReqMul":"1.45"
+        },
+        "prestigeButtonStyle":{
+            "backgorundColor":"red",
+            "fontSize":"22px",
+            "fontFamily":"Arial"
         }
     }
 }
