@@ -1,0 +1,21 @@
+.title {
+    font-size: 33px;
+    color: yellow;
+}
+
+body {
+    font-family: var(--get-font);
+    cursor:default;
+}
+
+:root {
+    --get-font:Arial;
+    --cursor:default;
+    --alpha-color:red;
+    --alove-border:green;
+    --beta-color:blue;
+    --brick-button:rgb(18, 18, 194);
+    --gamma-color:green;
+    --clock-border:yellow;
+    --clock-text-color:aqua;
+}
