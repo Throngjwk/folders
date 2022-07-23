@@ -14,5 +14,16 @@
             "fontSize":"22px",
             "fontFamily":"Arial"
         }
+    },
+    "minigames":{
+        "alove":{
+            "startData":{
+                "level":0,
+                "aloveReq":"1000"
+            },
+            "aloveTab":{
+                "template":"<span class='level'>Alove level:0</span><h2 class='flex'>Req:n(t) >= 1,000</h2>"
+            }
+        }
     }
 }
