@@ -8,6 +8,12 @@ body {
     cursor:default;
 }
 
+button.circle {
+    border: 50%;
+    width: 120px;
+    height: 120px;
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
