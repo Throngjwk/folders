@@ -1,0 +1,12 @@
+{
+    "points":"0",
+    "alpha":{
+        "startData":{
+            "alphaPower":"0",
+            "resource":"0",
+            "resourceFormula":"a",
+            "alphaReq":"25",
+            "alphaReqMul":"1.45"
+        }
+    }
+}
