@@ -7,6 +7,8 @@ var alpha = new Decimal(0)
 var alphaPower = new Decimal(0)
 var alphaPowerReq = new Decimal(25)
 var alphaReqBase = new Decimal(1.45)
+var aloveLevel = 0;
+var aloveReq = new Decimal(1e7)
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -29,9 +31,16 @@ setInterval(() => {
     } else {
         document.getElementById("alove").style.display = "none"
     }
+    if (n.gte(aloveReq)) {
+        aloveLevel += 1
+        aloveReq = aloveReq.mul(5)
+        document.getElementById("aloveNum").innerText = aloveLevel
+        document.getElementsByClassName("alove")[0].innerHTML = "Req: n(t) &GreaterEqual; " + aloveReq
+    }
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
    document.getElementById("number2").innerText = alpha
    document.getElementById("req1").innerText = alphaPowerReq
+   document.getElementsByClassName("alove")[0].innerHTML = "Req: n(t) &GreaterEqual; " + aloveReq
 }, 100);
