@@ -41,6 +41,26 @@ setInterval(() => {
         document.getElementById("aloveNum").innerText = aloveLevel
         document.getElementsByClassName("alove")[0].innerHTML = "Req: n(t) &GreaterEqual; " + aloveReq
     }
+    if (alphaPower.gte(25)) {
+        document.getElementsByClassName("started")[0].style.display = "none"
+    } else {
+        document.getElementsByClassName("started")[0].style.display = "block"
+    }
+    if (alphaPower.gte(25)) {
+        document.getElementById("guide1").style.display = "none"
+    } else {
+        document.getElementById("guide1").style.display = "block"
+    }
+    if (alphaPower.gte(25)) {
+        document.getElementById("guide2").style.display = "none"
+    } else {
+        document.getElementById("guide2").style.display = "block"
+    }
+    if (alphaPower.gte(25)) {
+        document.getElementById("guide3").style.display = "none"
+    } else {
+        document.getElementById("guide3").style.display = "block"
+    }
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
