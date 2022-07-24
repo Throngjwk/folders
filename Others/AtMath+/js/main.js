@@ -32,7 +32,7 @@ setInterval(() => {
     n = n.add(t.pow(beta.add(1)).mul(alpha.add(1)))
     t =t.add(0.1)
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
-    betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1)))
+    betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             alpha = alphaPower.mul(4).mul(aloveLevel + 1)
