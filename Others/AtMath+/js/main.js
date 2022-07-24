@@ -87,4 +87,5 @@ setInterval(() => {
    document.getElementsByClassName("alove")[0].innerHTML = "Req: n(t) &GreaterEqual; " + aloveReq
    document.getElementById("number3").innerText = betaPower
    document.getElementById("number4").innerText = beta
+   document.getElementById("req2").innerText = betaPowerReq
 }, 100);
