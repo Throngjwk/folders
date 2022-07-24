@@ -6,9 +6,10 @@ var alphaPowerReq = new Decimal(25)
 var alphaReqBase = new Decimal(1.45)
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
-    if (n.gte(alphaPowerReq))
+    if (n.gte(alphaPowerReq)) {
     n = new Decimal(0)
     alphaPower = alphaPower.add(1)
+    }
 }
 
 setInterval(() => {
