@@ -17,14 +17,22 @@ button.circle {
     font-family: Arial;
 }
 
+button.reset.alpha {
+    background-color: var(--alpha-color);
+    font-size: var(--alpha-size);
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
     --alpha-color:red;
+    --alpha-size:22px;
     --alove-border:green;
     --beta-color:blue;
+    --beta-size:23px;
     --brick-button:rgb(18, 18, 194);
     --gamma-color:green;
+    --gamma-size:23.3px;
     --clock-border:yellow;
     --clock-text-color:aqua;
 }
