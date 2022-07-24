@@ -39,6 +39,11 @@ button.circle2 {
     font-family: Arial;
 }
 
+button.reset.beta {
+    background-color: var(--beta-color);
+    font-size: var(--beta-size);
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
