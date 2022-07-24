@@ -30,6 +30,15 @@ button.reset.alpha {
     justify-content: center;
 }
 
+button.circle2 {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: var(--beta-color);
+    font-size: 22px;
+    font-family: Arial;
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;

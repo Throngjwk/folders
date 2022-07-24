@@ -9,11 +9,22 @@ var alphaPowerReq = new Decimal(25)
 var alphaReqBase = new Decimal(1.45)
 var aloveLevel = 0;
 var aloveReq = new Decimal(1e7)
+var beta = new Decimal(0)
+var betaPower = new Decimal(0)
+var betaReq = new Decimal()
+var betaPowerReqBase = new Decimal(1000)
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
     n = new Decimal(0)
     alphaPower = alphaPower.add(1)
+    }
+}
+
+document.getElementsByClassName("reset beta")[0].onclick = () => {
+    if (n.gte(alphaPowerReq)) {
+    n = new Decimal(0)
+    betaPower = betaPower.add(1)
     }
 }
 
