@@ -22,7 +22,7 @@ document.getElementsByClassName("reset alpha")[0].onclick = () => {
 }
 
 document.getElementsByClassName("reset beta")[0].onclick = () => {
-    if (n.gte(alphaPowerReq)) {
+    if (n.gte(betaPowerReq)) {
     n = new Decimal(0)
     betaPower = betaPower.add(1)
     }
