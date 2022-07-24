@@ -25,8 +25,9 @@ button.reset.alpha {
 .alove, h2.alove {
     display: flex;
     border-style: solid;
-    font-size: 2.9vh;
+    font-size: 4.6vh;
     border-color: var(--alove-border);
+    justify-content: center;
 }
 
 :root {
