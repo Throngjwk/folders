@@ -28,6 +28,17 @@
             "fontSize":"22px",
             "fontFamily":"Arial"
         },
+        "upgrades":{
+            "upgrader11":{
+                "variables":{
+                    "cost":"2",
+                    "effect":"0.1"
+                },
+                "title":"Beta Upgrader 1",
+                "description":"Return Add t mulitipler by 1.",
+                "unlocked":"betaPower.gte(2)"
+            }
+        },
         "unlocked":"aloveLevel >= 3"
     },
     "minigames":{
