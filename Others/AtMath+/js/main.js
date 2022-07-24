@@ -22,7 +22,11 @@ setInterval(() => {
     t =t.add(0.1)
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
     if (alphaPower.gte(20)) {
-        alpha = alphaPower.mul(4)
+        if (aloveLevel.gte(1)) {
+            alpha = alphaPower.mul(4).mul(aloveLevel.add(1))
+        } else {
+            alpha = alphaPower.mul(4)
+        }
     } else {
         alpha = alphaPower
     }
