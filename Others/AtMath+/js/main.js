@@ -11,7 +11,7 @@ var aloveLevel = 0;
 var aloveReq = new Decimal(1e7)
 var beta = new Decimal(0)
 var betaPower = new Decimal(0)
-var betaReq = new Decimal()
+var betaPowerReq = new Decimal(2.5e8)
 var betaPowerReqBase = new Decimal(1000)
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
@@ -32,7 +32,7 @@ setInterval(() => {
     n = n.add(t.pow(beta.add(1)).mul(alpha.add(1)))
     t =t.add(0.1)
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
-    betaPower = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1)))
+    betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1)))
     if (alphaPower.gte(20)) {
         if (aloveLevel.gte(1)) {
             alpha = alphaPower.mul(4).mul(aloveLevel.add(1))
