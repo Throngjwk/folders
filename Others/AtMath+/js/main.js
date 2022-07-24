@@ -21,4 +21,5 @@ setInterval(() => {
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
    document.getElementById("number2").innerText = alpha
+   document.getElementById("req1").innerText = alphaPowerReq
 }, 100);
