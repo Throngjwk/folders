@@ -1,3 +1,6 @@
+//Elements
+let minigames = [new Alove("alove")]
+
 var n = new Decimal(0)
 var t = new Decimal(0)
 var alpha = new Decimal(0)
