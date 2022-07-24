@@ -44,6 +44,12 @@ button.reset.beta {
     font-size: var(--beta-size);
 }
 
+button#upgbeta1, button#upgbeta2, button#upgbeta3 {
+    background-color: var(--beta-color);
+    font-size: var(--beta-size);
+    font-family: var(--get-font);
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
@@ -56,5 +62,5 @@ button.reset.beta {
     --gamma-color:green;
     --gamma-size:23.3px;
     --clock-border:yellow;
-    --clock-text-color:aqua;
+    --clock-text-color:red;
 }
