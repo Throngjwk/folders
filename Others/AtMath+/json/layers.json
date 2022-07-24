@@ -13,7 +13,8 @@
             "backgorundColor":"red",
             "fontSize":"22px",
             "fontFamily":"Arial"
-        }
+        },
+        "unlocked":true
     },
     "minigames":{
         "alove":{
@@ -23,7 +24,8 @@
             },
             "aloveTab":{
                 "template":"<span class='level'>Alove level:0</span><h2 class='flex'>Req:n(t) >= 1,000</h2>"
-            }
+            },
+            "unlocked":"alphaPower.gte(25)"
         }
     }
 }
