@@ -29,9 +29,10 @@ document.getElementsByClassName("reset beta")[0].onclick = () => {
 }
 
 setInterval(() => {
-    n = n.add(t.mul(alpha.add(1)))
+    n = n.add(t.pow(beta.add(1)).mul(alpha.add(1)))
     t =t.add(0.1)
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
+    betaPower = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1)))
     if (alphaPower.gte(20)) {
         if (aloveLevel.gte(1)) {
             alpha = alphaPower.mul(4).mul(aloveLevel.add(1))
@@ -41,6 +42,7 @@ setInterval(() => {
     } else {
         alpha = alphaPower
     }
+    beta = betaPower
     if (alphaPower.gte(25)) {
         document.getElementById("alove").style.display = "block"
     } else {

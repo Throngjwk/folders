@@ -1,6 +1,6 @@
 {
     "points":"0",
-    "pointFormula":"t * alpha",
+    "pointFormula":"t^(beta + 1) * alpha",
     "alpha":{
         "startData":{
             "alphaPower":"0",
