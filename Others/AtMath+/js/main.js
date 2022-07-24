@@ -16,7 +16,11 @@ setInterval(() => {
     n = n.add(t.mul(alpha.add(1)))
     t =t.add(0.1)
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
-    alpha = alphaPower
+    if (alphaPower.gte(20)) {
+        alpha = alphaPower.mul(4)
+    } else {
+        alpha = alphaPower
+    }
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
