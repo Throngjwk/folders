@@ -15,7 +15,7 @@ document.getElementsByClassName("reset alpha")[0].onclick = () => {
 setInterval(() => {
     n = n.add(t.mul(alpha.add(1)))
     t =t.add(0.1)
-    alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower)
+    alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
     alpha = alphaPower
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
