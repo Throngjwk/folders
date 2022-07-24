@@ -28,7 +28,7 @@
             "fontSize":"22px",
             "fontFamily":"Arial"
         },
-        "unlocked":"aloveLevel.gte(3)"
+        "unlocked":"aloveLevel >= 3"
     },
     "minigames":{
         "alove":{

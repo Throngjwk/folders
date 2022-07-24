@@ -48,6 +48,11 @@ setInterval(() => {
     } else {
         document.getElementById("alove").style.display = "none"
     }
+    if (aloveLevel >= 3) {
+        document.getElementById("beta").style.display = "block"
+    } else {
+        document.getElementById("beta").style.display = "none"
+    }
     if (n.gte(aloveReq)) {
         aloveLevel += 1
         aloveReq = aloveReq.mul(5)
@@ -80,4 +85,6 @@ setInterval(() => {
    document.getElementById("number2").innerText = alpha
    document.getElementById("req1").innerText = alphaPowerReq
    document.getElementsByClassName("alove")[0].innerHTML = "Req: n(t) &GreaterEqual; " + aloveReq
+   document.getElementById("number3").innerText = betaPower
+   document.getElementById("number4").innerText = beta
 }, 100);
