@@ -24,6 +24,11 @@ setInterval(() => {
     } else {
         alpha = alphaPower
     }
+    if (alphaPower.gte(25)) {
+        document.getElementById("alove").style.display = "block"
+    } else {
+        document.getElementById("alove").style.display = "none"
+    }
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
