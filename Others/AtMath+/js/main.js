@@ -13,7 +13,7 @@ var beta = new Decimal(0)
 var betaPower = new Decimal(0)
 var betaPowerReq = new Decimal(2.5e8)
 var betaPowerReqBase = new Decimal(1000)
-let betaUpgrades = [new BetaUpgrade(2, 1)]
+let betaUpgrades = [new BetaUpgrade(new Decimal(0.1), new Decimal(1))]
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
