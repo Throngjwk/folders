@@ -6,5 +6,7 @@ class Alove {
           <h2 id="aloveLevel">0</h2>
           <h2 class="alove">Req:n(t) &GreaterEqual; 1e7</h2>
         `
+
+        document.getElementById(id).innerHTML = this.template
     }
 }
