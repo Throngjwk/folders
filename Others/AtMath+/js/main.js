@@ -56,7 +56,7 @@ document.getElementById("click").onclick = () => {
 
 document.getElementById("brickupg1").onclick = () => {
     if (bricks.gte(brickUpgrades[0].cost)) {
-    bricks = brick.sub(brickUpgrades[0].cost)
+    bricks = bricks.sub(brickUpgrades[0].cost)
     brickUpgrades[0].cost = brickUpgrades[0].cost.mul(2.5)
     brickUpgrades[0].effect = brickUpgrades[0].effect.add(1)
     }
