@@ -13,7 +13,7 @@ var beta = new Decimal(0)
 var betaPower = new Decimal(0)
 var betaPowerReq = new Decimal(2.5e8)
 var betaPowerReqBase = new Decimal(1000)
-let betaUpgrades = [new BetaUpgrade(new Decimal(2), new Decimal(1))]
+let betaUpgrades = [new BetaUpgrade(new Decimal(2), new Decimal(1)), new BetaUpgrade(new Decimal(4), new Decimal(1))]
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -32,8 +32,16 @@ document.getElementsByClassName("reset beta")[0].onclick = () => {
 document.getElementById("upgbeta1").onclick = () => {
     if (betaPower.gte(betaUpgrades[0].cost)) {
         betaPower = betaPower.sub(betaUpgrades[0].cost)
-        betaUpgrades[0].cost = betaUpgrades[0].cost.add(1)
+        betaUpgrades[0].cost = betaUpgrades[0].cost.add(3)
         betaUpgrades[0].effect = betaUpgrades[0].effect.add(0.1)
+    }
+}
+
+document.getElementById("upgbeta2").onclick = () => {
+    if (betaPower.gte(betaUpgrades[1].cost)) {
+        betaPower = betaPower.sub(betaUpgrades[1].cost)
+        betaUpgrades[1].cost = betaUpgrades[1].cost.add(3)
+        betaUpgrades[1].effect = betaUpgrades[1].effect.mul(2.2)
     }
 }
 
