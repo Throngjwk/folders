@@ -44,10 +44,14 @@ button.reset.beta {
     font-size: var(--beta-size);
 }
 
-button#upgbeta1, button#upgbeta2, button#upgbeta3 {
+button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg1 {
     background-color: var(--beta-color);
     font-size: var(--beta-size);
     font-family: var(--get-font);
+}
+
+.center {
+    text-align: center;
 }
 
 :root {
