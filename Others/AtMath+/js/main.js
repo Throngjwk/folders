@@ -18,6 +18,7 @@ var bricks = new Decimal(0)
 var bpc = new Decimal(1)
 var bps = new Decimal(0)
 var beff = new Decimal(0)
+let brickUpgrades = [new BrickUpgrade(new Decimal(20), new Decimal(1))]
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -51,6 +52,14 @@ document.getElementById("upgbeta2").onclick = () => {
 
 document.getElementById("click").onclick = () => {
     bricks = bricks.add(1)
+}
+
+document.getElementById("brickupg1").onclick = () => {
+    if (bricks.gte(brickUpgrades[0].cost)) {
+    bricks = brick.sub(brickUpgrades[0].cost)
+    brickUpgrades[0].cost = brickUpgrades[0].cost.mul(2.5)
+    brickUpgrades[0].effect = brickUpgrades[0].effect.add(1)
+    }
 }
 
 setInterval(() => {
@@ -114,6 +123,7 @@ setInterval(() => {
         document.getElementById("guide3").style.display = "none"
     }
     beff = bricks.sqrt().add(1)
+    bpc = brickUpgrades[0].effect
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
