@@ -1,5 +1,5 @@
 //Elements
-let minigames = [new Alove("alove")]
+let minigames = [new Alove("alove"), new BrickClicker("brickClicker")]
 
 var n = new Decimal(0)
 var t = new Decimal(0)
@@ -14,6 +14,10 @@ var betaPower = new Decimal(0)
 var betaPowerReq = new Decimal(2.5e8)
 var betaPowerReqBase = new Decimal(1000)
 let betaUpgrades = [new BetaUpgrade(new Decimal(2), new Decimal(1)), new BetaUpgrade(new Decimal(4), new Decimal(1))]
+var bricks = new Decimal(0)
+var bpc = new Decimal(1)
+var bps = new Decimal(0)
+var beff = new Decimal(0)
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -45,6 +49,10 @@ document.getElementById("upgbeta2").onclick = () => {
     }
 }
 
+document.getElementById("click").onclick = () => {
+    bricks = bricks.add(1)
+}
+
 setInterval(() => {
     n = n.add(t.pow(beta.add(1)).mul(alpha.add(1)))
     t =t.add(new Decimal(0.1).mul(betaUpgrades[0].effect))
@@ -73,6 +81,11 @@ setInterval(() => {
         document.getElementById("beta").style.display = "block"
     } else {
         document.getElementById("beta").style.display = "none"
+    }
+    if (betaUpgrades[1].effect.gte(2)) {
+        document.getElementById("brickClicker").style.display = "block"
+    } else {
+        document.getElementById("brickClicker").style.display = "none"
     }
     if (n.gte(aloveReq)) {
         aloveLevel += 1
