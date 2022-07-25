@@ -5,7 +5,7 @@
         "startData":{
             "alphaPower":"0",
             "resource":"0",
-            "resourceFormula":"a * aloveLevel",
+            "resourceFormula":"a * aloveLevel * log2(n)",
             "alphaReq":"25",
             "alphaReqMul":"1.45"
         },
@@ -52,6 +52,17 @@
                 "template":"<span class='level'>Alove level:0</span><h2 class='flex'>Req:n(t) >= 1,000</h2>"
             },
             "unlocked":"alphaPower.gte(25)"
+        },
+        "brickClicker":{
+            "startData":{
+                "bricks":"0",
+                "bpc":"0"
+            },
+            "brickClickerTab":{
+                "type":"clicker",
+                "template":"<span class='center'>You Have 0 Bricks.</span><button id='click'>Click Me!</button><button id='brickupg1'>Brick Upgrader 1 <br> Increase Brick per click by 1. <br> Cost:<span id='cost4'>20</span></button>"
+            },
+            "unlocked":"betaUpgrades[1].effect.gte(2)"
         }
     }
 }
