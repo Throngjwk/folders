@@ -7,5 +7,7 @@ class BrickClicker {
           <button id="click">Click Me!</button>
           <button id="brickupg1">Brick Upgrader 1 <br> Increase bricks per click by 1. <br> Cost:<span id="cost4">20</span></button>
         `
+
+        document.getElementById(id).innerHTML = this.template
     }
 }
