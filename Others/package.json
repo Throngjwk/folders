@@ -1,0 +1,14 @@
+{
+    "name": "Other Projects",
+     "description": "I have deveploer a this package.",
+     "type": "commonjs",
+     "version": "1.0.0",
+     "author": {
+        "email": "annontationsnushu@gmail.com",
+        "url": "https://githb.com/Annontations6",
+        "name": "Annontations6"
+     },
+     "license": "MIT",
+     "main": "index.html",
+     "preview": true
+}
