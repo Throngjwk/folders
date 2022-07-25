@@ -61,7 +61,7 @@ setInterval(() => {
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
-                alpha = alphaPower.mul(4).mul(aloveLevel + 1).mul(n.log2())
+                alpha = alphaPower.mul(4).mul(aloveLevel + 1).mul(n.log2()).mul(beff)
             } else {
             alpha = alphaPower.mul(4).mul(aloveLevel + 1)
             }
@@ -113,6 +113,7 @@ setInterval(() => {
     } else {
         document.getElementById("guide3").style.display = "none"
     }
+    beff = bricks.sqrt().add(1)
    document.getElementById("t").innerText = t
    document.getElementById("nt").innerText = n;
    document.getElementById("number1").innerText = alphaPower
