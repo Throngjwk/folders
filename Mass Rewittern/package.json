@@ -1,0 +1,48 @@
+{
+    "name": "Mass Rewittern",
+    "description": "You find so know +1 Mass to go.",
+    "version": "1.0.0",
+    "author": {
+        "url": "https://github.com/Annontations6",
+        "name": "Annontations6"
+    },
+    "type": "commonjs",
+    "displayName": "Mass",
+    "bin": "101",
+    "vue-avaiable":false,
+    "categories": [
+        "Notebooks",
+        "Languages",
+        "Formatters"
+    ],
+    "galleryBanner": {
+        "color": "#FF00FF",
+        "theme": "light"
+    },
+    "repository": {
+        "url": "https://github.com/Annontations6"
+    },
+    "bugs": {
+        "url": "https://github.com/Annontations6"
+    },
+    "license": "MIT",
+    "outputed":1,
+    "html-lines":67,
+    "enabledApiProposals": [
+        "badges",
+        "customEditorMove",
+        "contribMergeEditorToolbar",
+        "contribShareMenu",
+        "contribLabelFormatterWorkspaceTooltip"
+    ],
+    "packageType":"github",
+    "backgroundHtml":["#550055", "#220022", "#550099"],
+    "tenchinal":{
+        "type":"github",
+        "files": {
+            "filesNames":["break_eternity.js"]
+        }
+    },
+    "licenseType":"github",
+    "break_eternity-lines":3105
+}

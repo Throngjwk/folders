@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <title>Tear Idle</title>
+    <!--
+     Styles 
+     SUPPORT TAGS:
+     h1
+     h2
+     h3
+     h4
+     h5
+     h6
+     area
+     div
+     input
+     button
+    -->
+    <style>
+        h1, h2, h3, h4 {
+            color: var(--text-color);
+            bottom: inherit;
+            font-family: comic sans ms;
+            text-align: vart(--text-heading);
+        }
+
+        body {
+            cursor: var(--cursor);
+            background-color: var(--background);
+        }
+
+        :root {
+            --text-heading:left;
+            --text-color:turquoise;
+            --title-color:rgb(102, 179, 131);
+            --cursor:display;
+            --special:#555;
+            --error-color:darkred;
+            --background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tear">You Have 0 Tear.</h1>
+    <h2>haved 1 per click!</h2>
+    <h4>Click</h4>
+    <button id="click">Click me!</button>
+    <!-- Upgrades -->
+    <button id="cost1">Cost:50 <var>a</var> = &#x221A;<span id="sqrt"></span></button>
+</body>
+<script src="js/break_eternity.min.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</html>

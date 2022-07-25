@@ -1,0 +1,19 @@
+{
+    "name": "The Math",
+    "description": "I Have more greek wowowoow",
+    "version": "1.0.0",
+    "preview": true,
+    "main": "index.html",
+    "author": {
+        "email": "annontationsnushu@gmail.com",
+        "url": "https://github.com/Annontations6",
+        "name": "Annontations6"
+    },
+    "license": "MIT",
+    "repository": {
+        "directory": "folders",
+        "type": "github",
+        "url": "https://github.com/Annontations6"
+    },
+    "type": "module"
+}

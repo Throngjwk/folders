@@ -1,0 +1,8 @@
+:root {
+    --size:20px;
+    --background-color-upgrade:turquoise;
+    --background-color-milestone-upgrade:aqua;
+    --title-size:22px;
+    --background-color:rgb(120, 194, 71);
+    --vue-allowed-color:red;
+}

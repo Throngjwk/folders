@@ -1,0 +1,44 @@
+/* 2 Keyframes */
+
+@keyframes entrycolor {
+    2% {
+        color: turquoise;
+    }
+    20% {
+        color: rgb(197, 208, 127);
+    }
+    40% {
+        color: rgb(84, 173, 115);
+    }
+    60% {
+        color: rgb(127, 168, 144);
+    }
+    90% {
+        color: rgb(87, 192, 162);
+    }
+    100% {
+        color: rgb(154, 163, 96);
+    }
+}
+
+grid[type=grid] {
+    display: grid;
+    text-align: center;
+    font-family: monospace;
+}
+
+grid[type=gadient] {
+    display: grid;
+    grid-area: auto;
+    table-layout: inherit;
+}
+
+grid[type=entrycolor] {
+    display: grid;
+    animation: entrycolor 4s infinite;
+}
+
+grid[type=big] {
+    display: grid;
+    font-size: xx-large;
+}
