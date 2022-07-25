@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title id="title">Theory 2:0 &rho;</title>
+    <link rel="icon" href="svg/download.svg">
+</head>
+<body>
+    <h2 id="rhotau">0 &rho;, 0 &tau;</h2>
+    <h4 class="primary equaltion">&rho; = q<sub>1</sub><sup style="display: none;" id="q1expo">1.00</sup> r<sub>1</sub><sup style="display: none;" id="r1expo"></sup></h4>
+    <h4 class="secondary equaltion">&tau; = max &rho;</h4>
+    <h4 class="quaternaryEntires">
+        <h3>q<sub>1</sub> = <span id="q1">0</span></h3>
+        <h3>q<sub>2</sub> = <span id="q2">0</span></h3>
+        <h3>q<sub>3</sub> = <span id="q3">0</span></h3>
+        <h3>q<sub>4</sub> = <span id="q4">0</span></h3>
+        <h3>r<sub>1</sub> = <span id="r1">0</span></h3>
+        <h3>r<sub>2</sub> = <span id="r2">0</span></h3>
+        <h3>r<sub>3</sub> = <span id="r3">0</span></h3>
+        <h3>r<sub>4</sub> = <span id="r4">0</span></h3>
+    </h4>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost1">Cost:<span id="cn1">10</span> &rho; (dot(q<sub>1</sub>) = <span id="number"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost2">Cost:<span id="cn2">5000</span> &rho; (dot(q<sub>2</sub>) = <span id="number2"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost3">Cost:<span id="cn3">3e25</span> &rho; (dot(q<sub>3</sub>) = <span id="number3"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost4">Cost:<span id="cn4">8e50</span> &rho; (dot(q<sub>4</sub>) = <span id="number4"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost5">Cost:<span id="cn5">2e6</span> &rho; (dot(r<sub>1</sub>) = <span id="number5"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost6">Cost:<span id="cn6">2e6</span> &rho; (dot(r<sub>2</sub>) = <span id="number6"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost7">Cost:<span id="cn7">2e6</span> &rho; (dot(r<sub>3</sub>) = <span id="number7"></span>)</button>
+    <button style="font-family: sans-serif;background-color: turquoise;" id="cost8">Cost:<span id="cn8">2e6</span> &rho; (dot(r<sub>4</sub>) = <span id="number8"></span>)</button>
+    <h3>Milestone Upgrades</h3>
+    <button id="mc1" class="milestone-upgrade">Cost:1e25 &rho;</button>
+    <button id="mc2" class="milestone-upgrade">Cost:1e50 &rho;</button>
+    <button id="mc3" class="milestone-upgrade">Cost:1e75 &rho;</button>
+    <button id="mc4" class="milestone-upgrade">Cost:1e25 &rho;</button>
+    <button id="mc5" class="milestone-upgrade">Cost:1e50 &rho;</button>
+    <button id="mc6" class="milestone-upgrade">Cost:1e75 &rho;</button>
+</body>
+</html>
+<script src="js/break_eternity.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+setInterval(() => {
+        document.getElementById("number").innerText = dotq1;
+        document.getElementById("number2").innerText = dotq2;
+        document.getElementById("number3").innerText = dotq3;
+        document.getElementById("number4").innerText = dotq4;
+        document.getElementById("number5").innerText = dotr1;
+        document.getElementById("number6").innerText = dotr2;
+        document.getElementById("number7").innerText = dotr3;
+        document.getElementById("number8").innerText = dotr4;
+    }, 400);
+</script>
+<link rel="stylesheet" href="css/main.css">

@@ -1,0 +1,57 @@
+{
+    "points":"0",
+    "pointFormula":"t^(beta + 1) * alpha",
+    "alpha":{
+        "startData":{
+            "alphaPower":"0",
+            "resource":"0",
+            "resourceFormula":"a * aloveLevel",
+            "alphaReq":"25",
+            "alphaReqMul":"1.45"
+        },
+        "prestigeButtonStyle":{
+            "backgorundColor":"red",
+            "fontSize":"22px",
+            "fontFamily":"Arial"
+        },
+        "unlocked":true
+    },
+    "beta":{
+        "startData":{
+            "betaPower":"0",
+            "resource":"0",
+            "resourceFormula":"b",
+            "betaReq":"2.5e8"
+        },
+        "prestigeButtonStyle":{
+            "backgorundColor":"blue",
+            "fontSize":"22px",
+            "fontFamily":"Arial"
+        },
+        "upgrades":{
+            "upgrader11":{
+                "variables":{
+                    "cost":"2",
+                    "effect":"0.1"
+                },
+                "title":"Beta Upgrader 1",
+                "description":"Return Add t mulitipler by 1.",
+                "unlocked":"betaPower.gte(2)"
+            }
+        },
+        "unlocked":"aloveLevel >= 3"
+    },
+    "minigames":{
+        "alove":{
+            "startData":{
+                "level":0,
+                "aloveReq":"1000",
+                "aloveMul":"5"
+            },
+            "aloveTab":{
+                "template":"<span class='level'>Alove level:0</span><h2 class='flex'>Req:n(t) >= 1,000</h2>"
+            },
+            "unlocked":"alphaPower.gte(25)"
+        }
+    }
+}

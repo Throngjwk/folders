@@ -1,0 +1,22 @@
+css-svg {
+    display: inline;
+    position: relative;
+    cursor: default;
+}
+
+css-svg.not-allowed {
+    display: inline;
+    cursor: not-allowed;
+}
+
+css-svg[type=table] {
+    display: table;
+}
+
+css-svg[type=tablecolmun] {
+    display: table-column;
+}
+
+css-svg[type=tablerow] {
+    display: table-row;
+}
