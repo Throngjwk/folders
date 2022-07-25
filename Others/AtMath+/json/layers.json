@@ -32,10 +32,19 @@
             "upgrader11":{
                 "variables":{
                     "cost":"2",
-                    "effect":"0.1"
+                    "effect":"1"
                 },
                 "title":"Beta Upgrader 1",
                 "description":"Return Add t mulitipler by 1.",
+                "unlocked":"betaPower.gte(2)"
+            },
+            "upgrader12":{
+                "variables":{
+                    "cost":"4",
+                    "effect":"1"
+                },
+                "title":"Beta Upgrader 2",
+                "description":"Get Mulitiply n by 2.25 and Unlock new Brick Clicker.",
                 "unlocked":"betaPower.gte(2)"
             }
         },
@@ -61,6 +70,17 @@
             "brickClickerTab":{
                 "type":"clicker",
                 "template":"<span class='center'>You Have 0 Bricks.</span><button id='click'>Click Me!</button><button id='brickupg1'>Brick Upgrader 1 <br> Increase Brick per click by 1. <br> Cost:<span id='cost4'>20</span></button>"
+            },
+            "upgrades":{
+                "upgrader11":{
+                    "variables":{
+                        "cost":"20",
+                        "effect":"1"
+                    },
+                    "title":"Brick Upgrader 1",
+                    "description":"Increase Per Click by 1.",
+                    "unlocked":"bricks.gte(20)"
+                }
             },
             "unlocked":"betaUpgrades[1].effect.gte(2)"
         }
