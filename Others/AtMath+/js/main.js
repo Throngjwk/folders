@@ -134,5 +134,6 @@ setInterval(() => {
    document.getElementById("number4").innerText = beta
    document.getElementById("req2").innerText = betaPowerReq
    document.getElementById("cost1").innerText = betaUpgrades[0].cost
+   document.getElementById("cost2").innerText = betaUpgrades[1].cost
    document.getElementById("bricks").innerText = bricks
 }, 100);
