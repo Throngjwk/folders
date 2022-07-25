@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=240, initial-scale=1.0">
+    <title>TODO: Other Projects</title>
+    <style>
+        head {
+            cursor: not-allowed;
+        }
+
+        body {
+            text-align: var(--align);
+            cursor: var(--bug);
+            background-color: var(--background-color);
+        }
+
+        .flex {
+            display: var(--displays);
+            justify-content: var(--just);
+        }
+
+        h2.flex button.play input[type=color] {
+            background-color: rgba(255, 0, 254, 0.5);
+        }
+
+        :root {
+            --displays:flex;
+            --align:center;
+            --background-color:#555555;
+            --bug:default;
+            --just:center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Total Game Score Start:0</h1>
+    <h1 style="text-align: center;">Total Game Score Completed:69</h1>
+    <h2 style="text-align: center;">Math</h2>
+    <h2 class="flex">
+        <button class="play"><a href="AtMath+/index.html">Play!</a><br>Change Background Color Button: <input type="color" name="Change 1" id="button1"><br><button id="update1">Update</button><br>Game Score Start:0 <br>Game Score Completed:69</button>
+    </h2>
+</body>
+</html>
+<script>
+    x = document.getElementById("button1")
+    x2 = document.getElementById("update1")
+
+    x2.onclick = () => {
+        document.getElementsByClassName("play")[0].style.backgroundColor = x.value
+    }
+</script>
