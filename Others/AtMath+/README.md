@@ -6,3 +6,5 @@
 - <- `js/classes/BetaUpgrade.js`: Can be Beta Upgrades.
 - <- `js/classes/BrickClicker.js`: Can to allow game.
 - <- `js/classes/BrickUpgrade.js`: Can be Brick Upgrades.
+## CAN BE SO?
+- I there know.
