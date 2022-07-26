@@ -13,7 +13,12 @@
             color: black;
             cursor: default;
         }
-    </style>
+
+        @font-face {
+            font-family: Major Mono Display;
+            src: url(fonts/MajorMonoDisplay-Regular.ttf);
+        }
+        </style>
 </head>
 <body>
     <h1 class="title">The Math (AM+)</h1>
@@ -41,6 +46,9 @@
     </h2>
     <h1>&gamma;-Power</h1>
     <button style="display: block;" class="reset gamma">Reset +1 &gamma;-Power <br>Req:n(t) &GreaterEqual; <span id="req3">1e35</span></button>
+    <h2 class="tabs">
+        <span style="display: none;" id="clock"></span>
+    </h2>
     <h2>Play for Math get wav.</h2>
     <audio controls>
         <source src="sound/Math.wav" type="audio/wav">

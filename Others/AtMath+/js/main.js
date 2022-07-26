@@ -32,6 +32,15 @@ const changelog = `
   <h4>Imporved &beta;-Power & The Brick Clicker</h4>
   <h4>Imporved Layers.json</h4>
 `
+var seconds = new Decimal(0)
+var days = new Decimal(0)
+var daysEffect = new Decimal(1)
+let UpdateClock = () => {
+    seconds = seconds.add(new Decimal(36).mul(daysEffect).mul(gammaPower.sub(3)))
+    document.getElementById("timer").innerText = seconds
+    document.getElementById("days").innerText = days
+    document.getElementById("de").innerText = daysEffect
+}
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
