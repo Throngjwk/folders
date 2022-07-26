@@ -1,5 +1,5 @@
 //Elements
-let minigames = [new Alove("alove"), new BrickClicker("brickClicker")]
+let minigames = [new Alove("alove"), new BrickClicker("brickClicker"), new Clock("clock")]
 
 var n = new Decimal(0)
 var t = new Decimal(0)
@@ -126,6 +126,11 @@ setInterval(() => {
     } else {
         document.getElementById("gamma").style.display = "none"
     }
+    if (gammaPower.gte(4)) {
+        document.getElementById("clock").style.display = "block"
+    } else {
+        document.getElementById("clock").style.display = "none"
+    }
     if (betaUpgrades[1].effect.gte(2)) {
         document.getElementById("brickClicker").style.display = "block"
     } else {
@@ -171,5 +176,8 @@ setInterval(() => {
    document.getElementById("cost1").innerText = betaUpgrades[0].cost
    document.getElementById("cost2").innerText = betaUpgrades[1].cost
    document.getElementById("bricks").innerText = bricks
+   if (condition) {
+     UpdateClock();
+   }
 }, 100);
 document.getElementById("changelog").innerHTML = changelog

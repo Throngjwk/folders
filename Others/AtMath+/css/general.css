@@ -59,6 +59,19 @@ button.reset.gamma {
     text-align: center;
 }
 
+h1.digital {
+    font-family: Major Mono Display;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.9vh;
+}
+
+label.mono {
+    font-family: monospace;
+    color: magenta;
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
