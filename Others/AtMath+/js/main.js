@@ -123,7 +123,7 @@ setInterval(() => {
     betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
     gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(gammaPower.div(new Decimal(13).mul(daysEffect)).add(1))).mul(1e35)
     intergations[0].int1req = new Decimal.pow(intergations[0].int1reqBase, intergations[0].resource).mul(1.25e5)
-    intergations[0].boostGain = new Decimal.pow(4, intergations[0].resource).sub(new Decimal(-1))
+    intergations[0].boostGain = new Decimal.pow(4, intergations[0].resource).sub(1)
     intergations[0].effectDescription = 
     "Mulitiply Gamma-Power Gain by " + intergations[0].boostGain
     gammaPower = gammaPower.add(intergations[0].boostGain)
