@@ -39,6 +39,15 @@ button.circle2 {
     font-family: Arial;
 }
 
+button.circle3 {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: var(--gamma-color);
+    font-size: 22px;
+    font-family: Arial;
+}
+
 button.reset.beta {
     background-color: var(--beta-color);
     font-size: var(--beta-size);
