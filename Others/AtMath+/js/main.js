@@ -24,6 +24,10 @@ var gammaPower = new Decimal(0)
 var gammaPowerReq = new Decimal(1e35)
 var gammaPowerReqBase = new Decimal(1e5)
 const changelog = `
+  <h3>v1.0.1 - Intergating number win Weep (Greek Generators, Automation)</h3>
+  <h4>Imporved &int;<sub>1</sub></h4>
+  <h4>Imporved &int;<sub>2</sub> & Automation</h4>
+  <br>
   <h3>v1.0.1 - More Greek, More Fun.</h3>
   <h4>Imporved &gamma;-Power & The Clock</h4>
   <br>
