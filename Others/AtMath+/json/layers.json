@@ -5,7 +5,7 @@
         "startData":{
             "alphaPower":"0",
             "resource":"0",
-            "resourceFormula":"a * aloveLevel * log2(n)",
+            "resourceFormula":"alpha * aloveLevel * log2(n)",
             "alphaReq":"25",
             "alphaReqMul":"1.45"
         },
@@ -20,7 +20,7 @@
         "startData":{
             "betaPower":"0",
             "resource":"0",
-            "resourceFormula":"b",
+            "resourceFormula":"beta",
             "betaReq":"2.5e8"
         },
         "prestigeButtonStyle":{
@@ -54,13 +54,32 @@
         "startData":{
             "gammaPower":"0",
             "resource":"0",
-            "resourceFormula":"c",
+            "resourceFormula":"gamma",
             "gammaReq":"1e35"
         },
         "prestigeButtonStyle":{
             "backgorundColor":"green",
             "fontSize":"22px",
             "fontFamily":"Arial"
+        }
+    },
+    "intergations":{
+        "int1":{
+            "startData":{
+                "int1Power":"0",
+                "resource":"0",
+                "resourceFormula":"int1",
+                "int1Req":"1.25e5",
+                "int1ReqBase":"10",
+                "effectDescription":"Mulitiply gamma power gain by 1",
+                "boost":"1"
+            },
+            "prestigeButtonStyle":{
+                "backgorundColor":"white",
+                "fontSize":"22px",
+                "fontFamily":"Arial"
+            },
+            "unlocked":"gammaPower.gte(1e5)"
         }
     },
     "minigames":{

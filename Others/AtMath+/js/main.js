@@ -41,6 +41,20 @@ let UpdateClock = () => {
     document.getElementById("days").innerText = days
     document.getElementById("de").innerText = daysEffect
 }
+var intergations = [{
+    resource:new Decimal(0),
+    int1req:new Decimal(1.25e5),
+    int1reqBase:new Decimal(10),
+    effectDescription:"Mulitiplying gamma power gain by 1",
+    boostGain:new Decimal(1),
+    upgrades:{
+        first:{
+            title:"Gain?",
+            description:"Mulitiply timer speed by 2",
+            cost:new Decimal(2)
+        }
+    }
+}]
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -60,6 +74,13 @@ document.getElementsByClassName("reset gamma")[0].onclick = () => {
     if (n.gte(gammaPowerReq)) {
     n = new Decimal(0)
     gammaPower = gammaPower.add(1)
+    }
+}
+
+document.getElementsByClassName("reset int")[0].onclick = () => {
+    if (n.gte(intergations[0].int1req)) {
+    n = new Decimal(0)
+    intergations[0].resource = intergations[0].resource.add(1)
     }
 }
 
@@ -130,6 +151,11 @@ setInterval(() => {
         document.getElementById("clock").style.display = "block"
     } else {
         document.getElementById("clock").style.display = "none"
+    }
+    if (gammaPower.gte(1e5)) {
+        document.getElementById("int1").style.display = "block"
+    } else {
+        document.getElementById("int1").style.display = "none"
     }
     if (betaUpgrades[1].effect.gte(2)) {
         document.getElementById("brickClicker").style.display = "block"

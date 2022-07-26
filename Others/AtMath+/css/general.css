@@ -84,6 +84,17 @@ label.mono {
     color: magenta;
 }
 
+h1[type=big] {
+    font-size: 13vh;
+    color: black;
+    font-family: var(--get-font);
+}
+
+button.reset.int {
+    background-color: snow;
+    font-size: var(--gamma-size);
+}
+
 :root {
     --get-font:Arial;
     --cursor:default;
