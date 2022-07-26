@@ -176,7 +176,7 @@ setInterval(() => {
    document.getElementById("cost1").innerText = betaUpgrades[0].cost
    document.getElementById("cost2").innerText = betaUpgrades[1].cost
    document.getElementById("bricks").innerText = bricks
-   if (condition) {
+   if (gammaPower.gte(4)) {
      UpdateClock();
    }
 }, 100);
