@@ -27,7 +27,7 @@ const changelog = `
   <h3>v1.0.1 - More Greek, More Fun.</h3>
   <h4>Imporved &gamma;-Power & The Clock</h4>
   <br>
-  <h3>v1.0.1 - Learing Greeks</h3>
+  <h3>v1.0.0 - Learing Greeks</h3>
   <h4>Imporved &alpha;-Power & The Alove</h4>
   <h4>Imporved &beta;-Power & The Brick Clicker</h4>
   <h4>Imporved Layers.json</h4>
