@@ -214,7 +214,7 @@ setInterval(() => {
    document.getElementById("number6").innerText = gamma
    document.getElementById("req3").innerText = gammaPowerReq
    document.getElementById("req4").innerText = intergations[0].int1req
-   document.getElementById("effectDesc").innerText = intergations[0].effectDescription
+   document.getElementById("effectDesc1").innerText = intergations[0].effectDescription
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
