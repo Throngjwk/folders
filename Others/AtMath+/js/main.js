@@ -82,7 +82,7 @@ document.getElementsByClassName("reset gamma")[0].onclick = () => {
 }
 
 document.getElementsByClassName("reset int")[0].onclick = () => {
-    if (n.gte(intergations[0].int1req)) {
+    if (gammaPower.gte(intergations[0].int1req)) {
     n = new Decimal(0)
     intergations[0].resource = intergations[0].resource.add(1)
     }
