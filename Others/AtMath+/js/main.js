@@ -126,6 +126,7 @@ setInterval(() => {
     intergations[0].boostGain = new Decimal.pow(4, intergations[0].resource).sub(new Decimal(0).sub(1))
     intergations[0].effectDescription = 
     "Mulitiply Gamma-Power Gain by " + intergations[0].boostGain
+    gammaPower = gammaPower.add(intergations[0].boostGain)
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
