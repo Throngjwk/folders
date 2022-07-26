@@ -123,6 +123,9 @@ setInterval(() => {
     betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
     gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(gammaPower.div(new Decimal(13).mul(daysEffect)).add(1))).mul(1e35)
     intergations[0].int1req = new Decimal.pow(intergations[0].int1reqBase, intergations[0].resource).mul(1e5)
+    intergations[0].boostGain = new Decimal.pow(4, intergations[0].resource).sub(0)
+    intergations[0].effectDescription = 
+    "Mulitiply Gamma-Power Gain by " + intergations[0].boostGain
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
@@ -211,6 +214,7 @@ setInterval(() => {
    document.getElementById("number6").innerText = gamma
    document.getElementById("req3").innerText = gammaPowerReq
    document.getElementById("req4").innerText = intergations[0].int1req
+   document.getElementById("effectDesc").innerText = intergations[0].effectDescription
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
