@@ -50,6 +50,19 @@
         },
         "unlocked":"aloveLevel >= 3"
     },
+    "gamma":{
+        "startData":{
+            "gammaPower":"0",
+            "resource":"0",
+            "resourceFormula":"c",
+            "gammaReq":"1e35"
+        },
+        "prestigeButtonStyle":{
+            "backgorundColor":"green",
+            "fontSize":"22px",
+            "fontFamily":"Arial"
+        }
+    },
     "minigames":{
         "alove":{
             "startData":{
@@ -83,6 +96,18 @@
                 }
             },
             "unlocked":"betaUpgrades[1].effect.gte(2)"
+        },
+        "clock":{
+            "startData":{
+                "days":"0",
+                "seconds":"0",
+                "daysEffect":"0"
+            },
+            "clockTab":{
+                "type":"digital",
+                "font":"Major Mono Display",
+                "template":"<h2>Days:0</h2><h2>Days Effect:0</h2><h2 class='digital'>0 seconds</h2>"
+            }
         }
     }
 }

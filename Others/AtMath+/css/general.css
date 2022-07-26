@@ -39,6 +39,15 @@ button.circle2 {
     font-family: Arial;
 }
 
+button.circle3 {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: var(--gamma-color);
+    font-size: 22px;
+    font-family: Arial;
+}
+
 button.reset.beta {
     background-color: var(--beta-color);
     font-size: var(--beta-size);
@@ -50,8 +59,29 @@ button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg
     font-family: var(--get-font);
 }
 
+button.reset.gamma {
+    background-color: var(--gamma-color);
+    font-size: var(--gamma-size);
+}
+
 .center {
     text-align: center;
+}
+
+h1.digital {
+    font-family: Major Mono Display;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.9vh;
+    border-style: solid;
+    border-color: var(--clock-border);
+    color: var(--clock-text-color);
+}
+
+label.mono {
+    font-family: monospace;
+    color: magenta;
 }
 
 :root {
@@ -65,6 +95,6 @@ button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg
     --brick-button:rgb(18, 18, 194);
     --gamma-color:green;
     --gamma-size:23.3px;
-    --clock-border:yellow;
+    --clock-border:gray;
     --clock-text-color:red;
 }

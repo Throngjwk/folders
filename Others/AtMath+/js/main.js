@@ -1,5 +1,5 @@
 //Elements
-let minigames = [new Alove("alove"), new BrickClicker("brickClicker")]
+let minigames = [new Alove("alove"), new BrickClicker("brickClicker"), new Clock("clock")]
 
 var n = new Decimal(0)
 var t = new Decimal(0)
@@ -19,6 +19,28 @@ var bpc = new Decimal(1)
 var bps = new Decimal(0)
 var beff = new Decimal(0)
 let brickUpgrades = [new BrickUpgrade(new Decimal(20), new Decimal(1))]
+var gamma = new Decimal(0)
+var gammaPower = new Decimal(0)
+var gammaPowerReq = new Decimal(1e35)
+var gammaPowerReqBase = new Decimal(1e5)
+const changelog = `
+  <h3>v1.0.1 - More Greek, More Fun.</h3>
+  <h4>Imporved &gamma;-Power & The Clock</h4>
+  <br>
+  <h3>v1.0.0 - Learing Greeks</h3>
+  <h4>Imporved &alpha;-Power & The Alove</h4>
+  <h4>Imporved &beta;-Power & The Brick Clicker</h4>
+  <h4>Imporved Layers.json</h4>
+`
+var seconds = new Decimal(0)
+var days = new Decimal(0)
+var daysEffect = new Decimal(1)
+let UpdateClock = () => {
+    seconds = seconds.add(new Decimal(36).mul(daysEffect).mul(gammaPower.sub(3)))
+    document.getElementById("timer").innerText = seconds
+    document.getElementById("days").innerText = days
+    document.getElementById("de").innerText = daysEffect
+}
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
     if (n.gte(alphaPowerReq)) {
@@ -31,6 +53,13 @@ document.getElementsByClassName("reset beta")[0].onclick = () => {
     if (n.gte(betaPowerReq)) {
     n = new Decimal(0)
     betaPower = betaPower.add(1)
+    }
+}
+
+document.getElementsByClassName("reset gamma")[0].onclick = () => {
+    if (n.gte(gammaPowerReq)) {
+    n = new Decimal(0)
+    gammaPower = gammaPower.add(1)
     }
 }
 
@@ -67,10 +96,11 @@ setInterval(() => {
     t =t.add(new Decimal(0.1).mul(betaUpgrades[0].effect))
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
     betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
+    gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(gammaPower.div(new Decimal(13).mul(daysEffect)).add(1))).mul(1e35)
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
-                alpha = alphaPower.mul(4).mul(aloveLevel + 1).mul(n.log2()).mul(beff)
+                alpha = alphaPower.mul(4).mul(aloveLevel + 1).mul(n.log2().pow(gammaPower.add(1))).mul(beff)
             } else {
             alpha = alphaPower.mul(4).mul(aloveLevel + 1)
             }
@@ -90,6 +120,16 @@ setInterval(() => {
         document.getElementById("beta").style.display = "block"
     } else {
         document.getElementById("beta").style.display = "none"
+    }
+    if (alphaPower.gte(175)) {
+        document.getElementById("gamma").style.display = "block"
+    } else {
+        document.getElementById("gamma").style.display = "none"
+    }
+    if (gammaPower.gte(4)) {
+        document.getElementById("clock").style.display = "block"
+    } else {
+        document.getElementById("clock").style.display = "none"
     }
     if (betaUpgrades[1].effect.gte(2)) {
         document.getElementById("brickClicker").style.display = "block"
@@ -136,4 +176,13 @@ setInterval(() => {
    document.getElementById("cost1").innerText = betaUpgrades[0].cost
    document.getElementById("cost2").innerText = betaUpgrades[1].cost
    document.getElementById("bricks").innerText = bricks
+   document.getElementById("number5").innerText = gammaPower
+   document.getElementById("number6").innerText = gamma
+   document.getElementById("req3").innerText = gammaPowerReq
+   if (gammaPower.gte(4)) {
+     UpdateClock();
+   }
+   days = seconds.div(86400)
+   daysEffect = days.add(1).sqrt()
 }, 100);
+document.getElementById("changelog").innerHTML = changelog
