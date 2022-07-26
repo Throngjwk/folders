@@ -50,6 +50,14 @@
         },
         "unlocked":"aloveLevel >= 3"
     },
+    "gamma":{
+        "startData":{
+            "gammaPower":"0",
+            "resource":"0",
+            "resourceFormula":"c",
+            "gammaReq":"1e35"
+        }
+    },
     "minigames":{
         "alove":{
             "startData":{

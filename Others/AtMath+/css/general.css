@@ -50,6 +50,11 @@ button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg
     font-family: var(--get-font);
 }
 
+button.reset.gamma {
+    background-color: var(--gamma-color);
+    font-size: var(--gamma-size);
+}
+
 .center {
     text-align: center;
 }
