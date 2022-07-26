@@ -182,7 +182,7 @@ setInterval(() => {
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
-   days = second.div(86400)
+   days = seconds.div(86400)
    daysEffect = days.add(1).sqrt()
 }, 100);
 document.getElementById("changelog").innerHTML = changelog
