@@ -118,6 +118,7 @@ setInterval(() => {
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
     betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
     gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(gammaPower.div(new Decimal(13).mul(daysEffect)).add(1))).mul(1e35)
+    intergations[0].int1req = new Decimal.pow(intergations[0].int1reqBase, intergations[0].resource).mul(1e5)
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
