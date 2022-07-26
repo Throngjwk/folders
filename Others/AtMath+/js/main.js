@@ -176,6 +176,9 @@ setInterval(() => {
    document.getElementById("cost1").innerText = betaUpgrades[0].cost
    document.getElementById("cost2").innerText = betaUpgrades[1].cost
    document.getElementById("bricks").innerText = bricks
+   document.getElementById("number5").innerText = gammaPower
+   document.getElementById("number6").innerText = gamma
+   document.getElementById("req3").innerText = gammaPowerReq
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
