@@ -96,7 +96,7 @@ setInterval(() => {
     t =t.add(new Decimal(0.1).mul(betaUpgrades[0].effect))
     alphaPowerReq = new Decimal.pow(alphaReqBase, alphaPower).mul(45)
     betaPowerReq = new Decimal.pow(betaPowerReqBase, betaPower.pow(betaPower.div(36).add(1))).mul(2.5e8)
-    gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(betaPower.div(13).add(1))).mul(1e35)
+    gammaPowerReq = new Decimal.pow(gammaPowerReqBase, gammaPower.pow(betaPower.div(new Decimal(13).mul(daysEffect)).add(1))).mul(1e35)
     if (alphaPower.gte(20)) {
         if (aloveLevel >= 1) {
             if (aloveLevel >= 5) {
@@ -182,5 +182,7 @@ setInterval(() => {
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
+   days = second.div(86400)
+   daysEffect = days.add(1).sqrt()
 }, 100);
 document.getElementById("changelog").innerHTML = changelog
