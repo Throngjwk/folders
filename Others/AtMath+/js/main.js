@@ -205,6 +205,7 @@ setInterval(() => {
    document.getElementById("number5").innerText = gammaPower
    document.getElementById("number6").innerText = gamma
    document.getElementById("req3").innerText = gammaPowerReq
+   document.getElementById("req4").innerText = intergations[0].int1req
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
