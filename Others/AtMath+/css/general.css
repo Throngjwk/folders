@@ -59,6 +59,12 @@ button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg
     font-family: var(--get-font);
 }
 
+button#upgint11 {
+    background-color: snow;
+    font-size: var(--gamma-size);
+    font-family: var(--get-font);
+}
+
 button.reset.gamma {
     background-color: var(--gamma-color);
     font-size: var(--gamma-size);
