@@ -79,6 +79,17 @@
                 "fontSize":"22px",
                 "fontFamily":"Arial"
             },
+            "upgrades":{
+                "upgrader11":{
+                    "variables":{
+                        "cost":"2",
+                        "effect":"1"
+                    },
+                    "title":"Gain?",
+                    "description":"Return t mulitipler by 10.",
+                    "unlocked":"intergations[0].startData.resource.gte(2)"
+                }
+            },
             "unlocked":"gammaPower.gte(1e5)"
         }
     },

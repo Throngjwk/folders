@@ -51,13 +51,10 @@ var intergations = [{
     int1reqBase:new Decimal(10),
     effectDescription:"Mulitiplying gamma power gain by 1",
     boostGain:new Decimal(1),
-    upgrades:{
-        first:{
-            title:"Gain?",
-            description:"Mulitiply timer speed by 2",
-            cost:new Decimal(2)
-        }
-    }
+    upgrades:[
+        new IntergationUpgrade(new Decimal(2), new Decimal(1)),
+        new IntergationUpgrade(new Decimal(3), new Decimal(1))
+    ]
 }]
 
 document.getElementsByClassName("reset alpha")[0].onclick = () => {
@@ -113,6 +110,22 @@ document.getElementById("brickupg1").onclick = () => {
     bricks = bricks.sub(brickUpgrades[0].cost)
     brickUpgrades[0].cost = brickUpgrades[0].cost.mul(2.5)
     brickUpgrades[0].effect = brickUpgrades[0].effect.add(1)
+    }
+}
+
+document.getElementById("upgint11").onclick = () => {
+    if (intergations[0].resource.gte(intergations[0].upgrades[0].cost)) {
+        intergations[0].resource = intergations[0].resource.sub(intergations[0].upgrades[0].cost)
+        intergations[0].upgrades[0].cost = intergations[0].upgrades[0].cost.add(4)
+        intergations[0].upgrades[0].effect = intergations[0].upgrades[0].effect.mul(10)
+    }
+}
+
+document.getElementById("upgint12").onclick = () => {
+    if (intergations[0].resource.gte(intergations[0].upgrades[1].cost)) {
+        intergations[0].resource = intergations[0].resource.sub(intergations[0].upgrades[1].cost)
+        intergations[0].upgrades[1].cost = intergations[0].upgrades[1].cost.add(4)
+        intergations[0].upgrades[1].effect = intergations[0].upgrades[1].effect.add(1)
     }
 }
 
@@ -216,6 +229,8 @@ setInterval(() => {
    document.getElementById("req3").innerText = gammaPowerReq
    document.getElementById("req4").innerText = intergations[0].int1req
    document.getElementById("effectDesc1").innerText = intergations[0].effectDescription
+   document.getElementById("cost3").innerText = intergations[0].upgrades[0].cost
+   document.getElementById("cost4").innerText = intergations[0].upgrades[1].cost
    if (gammaPower.gte(4)) {
      UpdateClock();
    }
