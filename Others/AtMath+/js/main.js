@@ -40,7 +40,7 @@ var seconds = new Decimal(0)
 var days = new Decimal(0)
 var daysEffect = new Decimal(1)
 let UpdateClock = () => {
-    seconds = seconds.add(new Decimal(36).mul(daysEffect).mul(gammaPower.sub(3)))
+    seconds = seconds.add(new Decimal(36).mul(daysEffect).mul(gammaPower.sub(3)).mul(intergations[0].upgrades[1].effect))
     document.getElementById("timer").innerText = seconds
     document.getElementById("days").innerText = days
     document.getElementById("de").innerText = daysEffect
