@@ -59,7 +59,7 @@ button#upgbeta1, button#upgbeta2, button#upgbeta3, button#click, button#brickupg
     font-family: var(--get-font);
 }
 
-button#upgint11 {
+button#upgint11, button#upgint12 {
     background-color: snow;
     font-size: var(--gamma-size);
     font-family: var(--get-font);
