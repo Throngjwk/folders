@@ -45,18 +45,28 @@
 </head>
 <body>
     <h1 style="text-align: center;">Total Game Score Start:0</h1>
-    <h1 style="text-align: center;">Total Game Score Completed:69</h1>
-    <h2 style="text-align: center;">Math</h2>
+    <h1 style="text-align: center;">Total Game Score Completed:124</h1>
+    <h2 style="text-align: center;">Math & Incremental's</h2>
     <h2 class="flex">
         <button class="play"><a href="AtMath+/index.html">Play!</a><br>Change Background Color Button: <input type="color" name="Change 1" id="button1"><br><h4 class="button" id="update1">Update</h4><br>Game Score Start:0 <br>Game Score Completed:69</button>
+    </h2>
+    <h2 style="text-align: center;">Others Projects</h2>
+    <h2 class="flex">
+        <button class="play"><a href="TheIdle/index.html">Play!</a><br>Change Background Color Button: <input type="color" name="Change 2" id="button2"><br><h4 class="button" id="update2">Update</h4><br>Game Score Start:0 <br>Game Score Completed:55</button>
     </h2>
 </body>
 </html>
 <script>
     x = document.getElementById("button1")
     x2 = document.getElementById("update1")
+    x3 = document.getElementById("button2")
+    x4 = document.getElementById("update2")
 
     x2.onclick = () => {
+        document.getElementsByClassName("play")[0].style.backgroundColor = x.value
+    }
+
+    x4.onclick = () => {
         document.getElementsByClassName("play")[0].style.backgroundColor = x.value
     }
 </script>

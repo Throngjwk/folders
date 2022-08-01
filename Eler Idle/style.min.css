@@ -1,0 +1,1 @@
+@font-face {font-family: Ubuntu;src: url(fonts/Ubuntu-R.ttf);}  h1 {color: yellow;} h2 {color: blue;} * {text-shadow: 1px 2px rgb(128, 128, 128);font-family: Ubuntu;text-align: center;} #coins {font-size: 25px;font-weight: 600;} title {cursor: wait;}  titlehave::before {content: "You Have ";font-size: 29px;} h1.have {font-size: 29px;}
