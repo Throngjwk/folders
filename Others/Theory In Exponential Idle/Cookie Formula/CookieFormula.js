@@ -44,18 +44,27 @@ var init = () => {
         f2.getInfo = (amount) => Utils.getMathTo(getDesc(f2.level), getDesc(f2.level + amount));
     }
 
+    // f3
+    {
+        let getDesc = (level) => "f_3=" + getF3(level).toString(0);
+        f3 = theory.createUpgrade(3, currency, new ExponentialCost(4.75e4, Math.log2(1.85)));
+        f3.getDescription = (_) => Utils.getMath(getDesc(f3.level));
+        f3.getInfo = (amount) => Utils.getMathTo(getDesc(f3.level), getDesc(f3.level + amount));
+    }
+
     /////////////////
     //// Achievements
     achievement1 = theory.createAchievement(0, "Get Be Useful Now!", "Reach 25 Cookies.", () => currency.value > 25);
     achievement2 = theory.createAchievement(1, "At Be So?", "Reach 100 Cookies.", () => currency.value > 100);
     achievement3 = theory.createAchievement(2, "Waittttttt", "Reach 350 Cookies.", () => currency.value > 350);
     achievement4 = theory.createAchievement(3, "Trash", "Reach 1,250 Cookies.", () => currency.value > 1250);
+    achievement5 = theory.createAchievement(4, "A be than f3 level?", "Reach 1 f3 level.", () => f3.level > 0);
 }
 
 var tick = (elapsedTime, multiplier) => {
     let dt = BigNumber.from(elapsedTime * multiplier);
     let bonus = theory.publicationMultiplier;
-    currency.value += dt * bonus * getF1(f1.level) + getF2(f2.level)
+    currency.value += dt * bonus * (getF1(f1.level) + getF2(f2.level) + getF3(f3.level))
 }
 
 var getPrimaryEquation = () => {
@@ -63,10 +72,13 @@ var getPrimaryEquation = () => {
 
     result += "f_2";
 
+    result += "f_3";
+
     return result;
 }
 
 var getF1 = (level) => BigNumber.from(level);
 var getF2 = (level) => BigNumber.from(level * 22);
+var getF3 = (level) => BigNumber.from(level * 592);
 
 init();
