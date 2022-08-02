@@ -21,8 +21,8 @@ var init = () => {
     // click
     {
         click = theory.createUpgrade(0, currency, new FreeCost());
-        click.getDescription = (_) => Utils.getMath(getDesc(click.level));
-        click.getInfo = (amount) => Utils.getMathTo(getDesc(click.level), getDesc(click.level + amount));
+        click.getDescription = (_) => "Click Me!";
+        click.getInfo = (amount) => "Click Me!";
         click.boughtOrRefunded = (_) => {
             currency.value += 1
         }
