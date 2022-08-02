@@ -55,7 +55,7 @@ var init = () => {
 var tick = (elapsedTime, multiplier) => {
     let dt = BigNumber.from(elapsedTime * multiplier);
     let bonus = theory.publicationMultiplier;
-    currency.value += dt * bonus * getF1(f1.level)
+    currency.value += dt * bonus * getF1(f1.level) + getF2(f2.level)
 }
 
 var getPrimaryEquation = () => {
@@ -65,5 +65,8 @@ var getPrimaryEquation = () => {
 
     return result;
 }
+
+var getF1 = (level) => BigNumber.from(level);
+var getF2 = (level) => BigNumber.from(level * 22);
 
 init();
