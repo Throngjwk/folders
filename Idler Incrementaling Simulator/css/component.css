@@ -1,0 +1,32 @@
+span[type=normal] {
+    font-size: x-small;
+}
+
+span[type=large] {
+    font-size: 51px;
+}
+
+span[shadow="1px 2px green"] {
+    font-size: 51px;
+    text-shadow: 1px 2px green;
+}
+
+lite {
+    display: none;
+}
+
+lite[charset=none] {
+    display: none;
+}
+
+lite[charset="UTF-8"] {
+    display: none;
+}
+
+lite[meta-label="og:title"] {
+    display: none;
+}
+
+lite[meta-label="og:description"] {
+    display: none;
+}
