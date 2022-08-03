@@ -55,6 +55,6 @@ setInterval(() => {
     document.getElementsByClassName("equal")[0].innerHTML = getF1(upgrades[0].level)
     document.getElementsByClassName("value")[0].innerHTML = currency[0].value
     document.getElementsByClassName("cost")[0].innerHTML = upgrades[0].cost
-    document.getElementsByClassName("equal")[1].innerHTML = getF2(upgrades[0].level)
+    document.getElementsByClassName("equal")[1].innerHTML = getF2(upgrades[1].level)
     document.getElementsByClassName("cost")[1].innerHTML = upgrades[1].cost
 }, 100);
