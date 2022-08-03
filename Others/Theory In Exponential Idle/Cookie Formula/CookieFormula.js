@@ -68,6 +68,14 @@ var init = () => {
         f5.getInfo = (amount) => Utils.getMathTo(getDesc(f5.level), getDesc(f5.level + amount));
     }
 
+    // f6
+    {
+        let getDesc = (level) => "f_6=" + getF5(level).toString(0);
+        f6 = theory.createUpgrade(6, currency, new ExponentialCost(1e9, Math.log2(1.85)));
+        f6.getDescription = (_) => Utils.getMath(getDesc(f6.level));
+        f6.getInfo = (amount) => Utils.getMathTo(getDesc(f6.level), getDesc(f6.level + amount));
+    }
+
     /////////////////
     //// Achievements
     achievement1 = theory.createAchievement(0, "Get Be Useful Now!", "Reach 25 Cookies.", () => currency.value > 25);
@@ -79,6 +87,9 @@ var init = () => {
     achievement7 = theory.createAchievement(6, "Millionare", "Reach 1e6 Cookies.", () => currency.value > 1e6);
     achievement8 = theory.createAchievement(7, "DeciMillionare", "Reach 1e7 Cookies.", () => currency.value > 1e7);
     achievement9 = theory.createAchievement(8, "HectoMillionare", "Reach 1e8 Cookies.", () => currency.value > 1e8);
+    achievement10 = theory.createAchievement(9, "Billionare", "Reach 1e9 Cookies.", () => currency.value > 1e9);
+    achievement11 = theory.createAchievement(10, "I am Strong?\u3000", "Reach 2,147,483,647 Cookies.", () => currency.value > 2147483647);
+    achievement12 = theory.createAchievement(11, "DeciBillionare", "Reach 1e10 Cookies. stronger than \u0022f3\u0022.", () => currency.value > 1e10);
 }
 
 var tick = (elapsedTime, multiplier) => {
@@ -94,6 +105,10 @@ var getPrimaryEquation = () => {
 
     result += "f_3";
 
+    result += "f_4";
+
+    result += "f_5";
+
     return result;
 }
 
@@ -101,6 +116,7 @@ var getF1 = (level) => BigNumber.from(level);
 var getF2 = (level) => BigNumber.from(level * 22);
 var getF3 = (level) => BigNumber.from(level * 592);
 var getF4 = (level) => BigNumber.from(level * 83152);
-var getF5 = (level) => BigNumber.from(level * 1500660);
+var getF5 = (level) => BigNumber.from(level * 1500660) * getF6(f6.level);
+var getF6 = (level) => BigNumber.from((level * 150) + 1);
 
 init();
