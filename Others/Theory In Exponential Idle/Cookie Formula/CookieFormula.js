@@ -70,10 +70,18 @@ var init = () => {
 
     // f6
     {
-        let getDesc = (level) => "f_6=" + getF5(level).toString(0);
+        let getDesc = (level) => "f_6=" + getF6(level).toString(0);
         f6 = theory.createUpgrade(6, currency, new ExponentialCost(1e9, Math.log2(1.85)));
         f6.getDescription = (_) => Utils.getMath(getDesc(f6.level));
         f6.getInfo = (amount) => Utils.getMathTo(getDesc(f6.level), getDesc(f6.level + amount));
+    }
+
+    // f7
+    {
+        let getDesc = (level) => "f_7=" + getF7(level).toString(0);
+        f7 = theory.createUpgrade(7, currency, new ExponentialCost(1e12, Math.log2(1.85)));
+        f7.getDescription = (_) => Utils.getMath(getDesc(f7.level));
+        f7.getInfo = (amount) => Utils.getMathTo(getDesc(f7.level), getDesc(f7.level + amount));
     }
 
     /////////////////
@@ -90,6 +98,9 @@ var init = () => {
     achievement10 = theory.createAchievement(9, "Billionare", "Reach 1e9 Cookies.", () => currency.value > 1e9);
     achievement11 = theory.createAchievement(10, "I am Strong?\u3000", "Reach 2,147,483,647 Cookies.", () => currency.value > 2147483647);
     achievement12 = theory.createAchievement(11, "DeciBillionare", "Reach 1e10 Cookies. stronger than \u0022f3\u0022.", () => currency.value > 1e10);
+    achievement13 = theory.createAchievement(12, "HectoBillionare", "Reach 1e11 Cookies.", () => currency.value > 1e11);
+    achievement14 = theory.createAchievement(13, "Trillionare", "Reach 1e12 Cookies.", () => currency.value > 1e12);
+    achievement15 = theory.createAchievement(14, "jQuery Lines of Code * Billion", "Reach 1.075e13 Cookies.", () => currency.value > 1.075e13);
 }
 
 var tick = (elapsedTime, multiplier) => {
@@ -116,7 +127,8 @@ var getF1 = (level) => BigNumber.from(level);
 var getF2 = (level) => BigNumber.from(level * 22);
 var getF3 = (level) => BigNumber.from(level * 592);
 var getF4 = (level) => BigNumber.from(level * 83152);
-var getF5 = (level) => BigNumber.from(level * 1500660) * getF6(f6.level);
+var getF5 = (level) => BigNumber.from(level * 1500660) * getF6(f6.level) * getF7(f7.level);
 var getF6 = (level) => BigNumber.from((level * 150) + 1);
+var getF7 = (level) => BigNumber.from((level * 120) + 1);
 
 init();
