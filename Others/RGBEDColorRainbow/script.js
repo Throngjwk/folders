@@ -21,3 +21,5 @@ function randomColor() {
 document.getElementById("gen").onclick = () => {
    randomColor()
 }
+
+document.getElementById("text").style.fontFamily = "Lucida Console"
