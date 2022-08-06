@@ -17,3 +17,7 @@ function randomColor() {
    document.getElementById("text").innerHTML =
    '<span style="color:' + color1 + '">' + inputColor.value[0] + '</span>' + '<span style="color:' + color2 + '">' + inputColor.value[1] + '</span>' + '<span style="color:' + color3 + '">' + inputColor.value[2] + '</span>' + '<span style="color:' + color4 + '">' + inputColor.value[3] + '</span>' + '<span style="color:' + color5 + '">' + inputColor.value[4] + '</span>' + '<span style="color:' + color6 + '">' + inputColor.value[5] + '</span>'
 }
+
+document.getElementById("gen").onclick = () => {
+   randomColor()
+}
