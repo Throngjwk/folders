@@ -1,2 +1,2 @@
 # Idling Ester
-### cool,
+### cool.
