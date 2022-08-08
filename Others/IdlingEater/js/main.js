@@ -6,7 +6,7 @@ console.log("Note: Than meter be now.")
 var meter = new Decimal(0)
 var meterTools = {
   time:0,
-  total:0,
+  total:new Decimal(0),
   timeLength:0,
   upgrades:{
     1:{
