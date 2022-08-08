@@ -30,11 +30,28 @@ h2, input[type="number"] {
 textarea[type="flipped area"] {
   transform:rotate(180deg);
 }
+
+button.upgrade, button.upgrade-locked {
+  background-color:#F31A0E;
+}
+
+button.upgrade-unlocked {
+  background-color:#0CFD17
+}
 </style>
 <head>
 <body>
 <h1>You Passed <span id="meter"></span> Meter.</h1>
+<br>
 <h2 class="labelItem">Upgrades</h2>
+<br>
+<button class="upgrade">
+<span id="upgTitle1"></span>
+<br>
+<span id="upgDesc1"></span>
+<br>
+<span id="upgCost1"></span>
+</button>
 </body>
 </html>
 <script src="js/break_eternity.min.js"></script>
