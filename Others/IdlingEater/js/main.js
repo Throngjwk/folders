@@ -28,5 +28,14 @@ function UpdateGameArea() {
     document.getElementById("meter").innerText = meter;
 }
 
-setInterval(UpdateGameArea, 123)
+function UpdateUpgradeArea() {
+   document.getElementById("upgTitle1").innerText = meterTools.upgrades["1"].title
+   document.getElementById("upgCost1").innerText = meterTools.upgrades["1"].cost
+   document.getElementById("upgEffect1").innerText = meterTools.upgrades["1"].getEffect()
+}
+
+setInterval(() => {
+  UpdateGameArea()
+  UpdateUpgradeArea()
+}, 123)
 
