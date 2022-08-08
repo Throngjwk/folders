@@ -12,10 +12,29 @@ body {
   display:flex;
   justify-content:center;
 }
+
+h2, input[type="number"] {
+  color:yellow;
+}
+
+.labelItem {
+  font-size:21px !important;
+  text-shadow:none;
+}
+
+* {
+  text-shadow:1px 2px rgb(22,22,22), 2px 3px hsl(40, 40% 50%);
+  user-select:none;
+}
+
+textarea[type="flipped area"] {
+  transform:rotate(180deg);
+}
 </style>
 <head>
 <body>
 <h1>You Passed <span id="meter"></span> Meter.</h1>
+<h2 class="labelItem">Upgrades</h2>
 </body>
 </html>
 <script src="js/break_eternity.min.js"></script>
