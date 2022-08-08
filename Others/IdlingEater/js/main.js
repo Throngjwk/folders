@@ -5,8 +5,6 @@ console.log("Note: Than meter be now.")
 
 var meter = new Decimal(0)
 var meterTools = {
-  ps:new Decimal(0),
-  pc:new Decimal(1),
   time:0,
   total:0,
   timeLength:0,
@@ -24,6 +22,9 @@ var meterTools = {
 
 function UpdateGameArea() {
     meter = meter.add(meterTools.upgrades["1"].getEffect())
+    meterTools.time += 0.1
+    meterTools.total = meterTools.total.add(meterTools.upgrades["1"].getEffect())
+    meterTools.timeLength = meterTools.time.length
     document.getElementById("meter").innerText = meter;
 }
 
