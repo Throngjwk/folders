@@ -63,6 +63,14 @@ function UpdateUpgradeArea() {
    } else {
       document.getElementById("upgrader1").className = "upgrade-locked"
    }
+   document.getElementById("upgTitle2").innerText = meterTools.upgrades["2"].title
+   document.getElementById("upgCost2").innerText = meterTools.upgrades["2"].cost
+   document.getElementById("upgEffect2").innerText = meterTools.upgrades["2"].getEffect()
+   if (meter.gte(meterTools.upgrades["2"].cost)) {
+      document.getElementById("upgrader2").className = "upgrade-unlocked"
+   } else {
+      document.getElementById("upgrader2").className = "upgrade-locked"
+   }
 }
 
 setInterval(() => {
