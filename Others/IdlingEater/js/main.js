@@ -20,6 +20,14 @@ var meterTools = {
   }
 }
 
+document.getElementById("upgrader1").onclick = () => {
+   if (meter.gte(meterTools.upgrades["1"].cost)) {
+     meter = meter.sub(meterTools.upgrades["1"].cost)
+     meterTools.upgrades["1"].level = meterTools.upgrades["1"].level.add(1)
+     meterTools.upgrades["1"].cost = meterTools.upgrades["1"].cost.mul(1.8)
+   }
+}
+
 function UpdateGameArea() {
     meter = meter.add(meterTools.upgrades["1"].getEffect())
     meterTools.time += 0.1
