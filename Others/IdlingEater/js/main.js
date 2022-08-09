@@ -32,7 +32,6 @@ document.getElementById("upgrader1").onclick = () => {
    if (meter.gte(meterTools.upgrades["1"].cost)) {
      meter = meter.sub(meterTools.upgrades["1"].cost)
      meterTools.upgrades["1"].level = meterTools.upgrades["1"].level.add(1)
-     meterTools.upgrades["1"].getEffect() = meterTools.upgrades["1"].getEffect().add(1)
      meterTools.upgrades["1"].cost = meterTools.upgrades["1"].cost.mul(1.8)
    }
 }
@@ -41,7 +40,6 @@ document.getElementById("upgrader2").onclick = () => {
    if (meter.gte(meterTools.upgrades["2"].cost)) {
      meter = meter.sub(meterTools.upgrades["2"].cost)
      meterTools.upgrades["2"].level = meterTools.upgrades["2"].level.add(1)
-     meterTools.upgrades["2"].getEffect() = meterTools.upgrades["2"].getEffect().add(1)
      meterTools.upgrades["2"].cost = meterTools.upgrades["2"].cost.mul(32)
    }
 }
