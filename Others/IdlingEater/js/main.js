@@ -37,6 +37,15 @@ document.getElementById("upgrader1").onclick = () => {
    }
 }
 
+document.getElementById("upgrader2").onclick = () => {
+   if (meter.gte(meterTools.upgrades["2"].cost)) {
+     meter = meter.sub(meterTools.upgrades["2"].cost)
+     meterTools.upgrades["2"].level = meterTools.upgrades["2"].level.add(1)
+     meterTools.upgrades["2"].getEffect() = meterTools.upgrades["2"].getEffect().add(1)
+     meterTools.upgrades["2"].cost = meterTools.upgrades["2"].cost.mul(32)
+   }
+}
+
 function UpdateGameArea() {
     meter = meter.add(meterTools.upgrades["1"].getEffect().mul(meterTools.upgrades["2"].getEffect()))
     meterTools.time += 0.1
@@ -50,9 +59,9 @@ function UpdateUpgradeArea() {
    document.getElementById("upgCost1").innerText = meterTools.upgrades["1"].cost
    document.getElementById("upgEffect1").innerText = meterTools.upgrades["1"].getEffect()
    if (meter.gte(meterTools.upgrades["1"].cost)) {
-      document.getElementById("upgrader1").className = "unlocked"
+      document.getElementById("upgrader1").className = "upgrade-unlocked"
    } else {
-      document.getElementById("upgrader1").className = "locked"
+      document.getElementById("upgrader1").className = "upgrade-locked"
    }
 }
 
