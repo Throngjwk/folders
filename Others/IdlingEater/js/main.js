@@ -7,7 +7,7 @@ var meter = new Decimal(0)
 var meterTools = {
   time:0,
   total:new Decimal(0),
-  allecrate:10
+  allecrate:10,
   timeLength:0,
   upgrades:{
     1:{
