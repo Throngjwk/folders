@@ -22,7 +22,7 @@ var meterTools = {
       level:new Decimal(0),
       cost:new Decimal(5000),
       getEffect() {
-        return new Decimal.pow(2, meterTools.upgrades["2"].level)
+        return new Decimal.pow(1.2, meterTools.upgrades["2"].level)
       }
     }
   }
