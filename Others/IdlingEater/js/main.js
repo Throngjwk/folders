@@ -49,6 +49,11 @@ function UpdateUpgradeArea() {
    document.getElementById("upgTitle1").innerText = meterTools.upgrades["1"].title
    document.getElementById("upgCost1").innerText = meterTools.upgrades["1"].cost
    document.getElementById("upgEffect1").innerText = meterTools.upgrades["1"].getEffect()
+   if (meter.gte(meterTools.upgrades["1"].cost)) {
+      document.getElementById("upgrader1").className = "unlocked"
+   } else {
+      document.getElementById("upgrader1").className = "locked"
+   }
 }
 
 setInterval(() => {
