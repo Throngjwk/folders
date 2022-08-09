@@ -25,6 +25,14 @@ var meterTools = {
         return new Decimal.pow(1.2, meterTools.upgrades["2"].level)
       }
     }
+    3:{
+      title:"Mulitiply Meter by 1.5",
+      level:new Decimal(0),
+      cost:new Decimal(50000000),
+      getEffect() {
+        return new Decimal.pow(1.5, meterTools.upgrades["3"].level)
+      }
+    }
   }
 }
 
@@ -44,8 +52,16 @@ document.getElementById("upgrader2").onclick = () => {
    }
 }
 
+document.getElementById("upgrader3").onclick = () => {
+   if (meter.gte(meterTools.upgrades["3"].cost)) {
+     meter = meter.sub(meterTools.upgrades["3"].cost)
+     meterTools.upgrades["3"].level = meterTools.upgrades["3"].level.add(1)
+     meterTools.upgrades["3"].cost = meterTools.upgrades["3"].cost.mul(4096)
+   }
+}
+
 function UpdateGameArea() {
-    meter = meter.add(meterTools.upgrades["1"].getEffect().mul(meterTools.upgrades["2"].getEffect()))
+    meter = meter.add(meterTools.upgrades["1"].getEffect().mul(meterTools.upgrades["2"].getEffect().mul(meterTools.upgrades["3"].getEffect())))
     meterTools.time += 0.1
     meterTools.total = meterTools.total.add(meterTools.upgrades["1"].getEffect())
     meterTools.timeLength = meterTools.time.length
@@ -68,6 +84,14 @@ function UpdateUpgradeArea() {
       document.getElementById("upgrader2").className = "upgrade-unlocked"
    } else {
       document.getElementById("upgrader2").className = "upgrade-locked"
+   }
+   document.getElementById("upgTitle3").innerText = meterTools.upgrades["3"].title
+   document.getElementById("upgCost3").innerText = meterTools.upgrades["3"].cost
+   document.getElementById("upgEffect3").innerText = meterTools.upgrades["3"].getEffect()
+   if (meter.gte(meterTools.upgrades["3"].cost)) {
+      document.getElementById("upgrader3").className = "upgrade-unlocked"
+   } else {
+      document.getElementById("upgrader3").className = "upgrade-locked"
    }
 }
 
