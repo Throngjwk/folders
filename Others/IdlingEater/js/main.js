@@ -16,6 +16,11 @@ var meterTools = {
       getEffect() {
         return meterTools.upgrades["1"].level.add(0.5)
       }
+    },
+    2:{
+      title:"Mulitiply Meter by 1.2",
+      level:new Decimal(0),
+      cost:new Decimal(5000)
     }
   }
 }
