@@ -20,7 +20,10 @@ var meterTools = {
     2:{
       title:"Mulitiply Meter by 1.2",
       level:new Decimal(0),
-      cost:new Decimal(5000)
+      cost:new Decimal(5000),
+      getEffect() {
+        return new Decimal.pow(2, meterTools.upgrades["2"].level)
+      }
     }
   }
 }
@@ -35,7 +38,7 @@ document.getElementById("upgrader1").onclick = () => {
 }
 
 function UpdateGameArea() {
-    meter = meter.add(meterTools.upgrades["1"].getEffect())
+    meter = meter.add(meterTools.upgrades["1"].getEffect().mul(meterTools.upgrades["2"].getEffect()))
     meterTools.time += 0.1
     meterTools.total = meterTools.total.add(meterTools.upgrades["1"].getEffect())
     meterTools.timeLength = meterTools.time.length
