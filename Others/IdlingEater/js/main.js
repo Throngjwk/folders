@@ -7,6 +7,7 @@ var meter = new Decimal(0)
 var meterTools = {
   time:0,
   total:new Decimal(0),
+  allecrate:10
   timeLength:0,
   upgrades:{
     1:{
@@ -100,3 +101,21 @@ setInterval(() => {
   UpdateUpgradeArea()
 }, 123)
 
+// ALSOS ALLECRATE.
+
+function UpdateAllecrateArea() {
+  meterTools.allecrate /= 1.5
+}
+
+var mod = {
+  name:"Idling Eater",
+  version:"1.0.0",
+  data:[
+    meter,
+    meterTools
+  ]
+}
+
+document.title = mod.name
+
+setInterval(UpdateAllecrateArea, 10000)
