@@ -24,7 +24,7 @@ var meterTools = {
       getEffect() {
         return new Decimal.pow(1.2, meterTools.upgrades["2"].level)
       }
-    }
+    },
     3:{
       title:"Mulitiply Meter by 1.5",
       level:new Decimal(0),
