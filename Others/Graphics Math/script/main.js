@@ -7,6 +7,8 @@ var value = [
     ""
 ]
 
+document.body.style.userSelect = "none"
+
 for (let i = 0; i < document.getElementsByClassName("math-addiontial-button").length; i++) {
     buttonItem.push(document.getElementsByClassName("math-addiontial-button")[i])
 }
