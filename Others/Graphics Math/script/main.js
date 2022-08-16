@@ -16,3 +16,7 @@ for (let i = 0; i < document.getElementsByClassName("math-addiontial-button").le
 buttonItem[0].onclick = function() {
     value[level] += "0"
 }
+
+setInterval(() => {
+    document.getElementById("math-text1").innerText = value[0]
+}, 100);
