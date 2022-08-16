@@ -2,3 +2,7 @@
     font-size: 17.2px;
     background: hwb(240 25% 50%);
 }
+
+html[lang=en] {
+    background-color: hsla(90, 53%, 45%, 0.849);
+}
