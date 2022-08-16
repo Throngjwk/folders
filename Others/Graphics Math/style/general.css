@@ -5,4 +5,5 @@
 
 html[lang=en] {
     background-color: hsla(90, 53%, 45%, 0.849);
+    font-family: Unifont, monospace;
 }
