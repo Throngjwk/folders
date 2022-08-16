@@ -11,3 +11,10 @@ html[lang=en] {
 pre {
     font-family: monospace;
 }
+
+button.math-addiontial-button {
+    background-color: hwb(190 17.5% 30%);
+    font-family: Unifont, monospace;
+    border: none;
+    margin: 3.35pt;
+}
