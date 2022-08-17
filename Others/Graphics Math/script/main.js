@@ -53,6 +53,18 @@ buttonItem[9].onclick = function() {
     value[level] += "9"
 }
 
+buttonItem[10].onclick = function() {
+    value[level] += "sqrt"
+}
+
+buttonItem[11].onclick = function() {
+    value[level] += "("
+}
+
+buttonItem[12].onclick = function() {
+    value[level] += ")"
+}
+
 setInterval(() => {
     document.getElementById("math-text1").innerText = value[0]
 }, 100);
