@@ -81,6 +81,18 @@ buttonItem[16].onclick = function() {
     value[level] += "*"
 }
 
+buttonItem[17].onclick = function() {
+    value[level] += "cos"
+}
+
+buttonItem[18].onclick = function() {
+    value[level] += "tan"
+}
+
+buttonItem[19].onclick = function() {
+    value[level] += "abs"
+}
+
 setInterval(() => {
     document.getElementById("math-text1").innerText = value[0]
 }, 100);
