@@ -197,6 +197,110 @@ buttonItem[45].onclick = function() {
     value[level] += "z"
 }
 
+buttonItem[46].onclick = function() {
+    value[level] += "A"
+}
+
+buttonItem[47].onclick = function() {
+    value[level] += "B"
+}
+
+buttonItem[48].onclick = function() {
+    value[level] += "C"
+}
+
+buttonItem[49].onclick = function() {
+    value[level] += "D"
+}
+
+buttonItem[50].onclick = function() {
+    value[level] += "E"
+}
+
+buttonItem[51].onclick = function() {
+    value[level] += "F"
+}
+
+buttonItem[52].onclick = function() {
+    value[level] += "G"
+}
+
+buttonItem[53].onclick = function() {
+    value[level] += "H"
+}
+
+buttonItem[54].onclick = function() {
+    value[level] += "I"
+}
+
+buttonItem[55].onclick = function() {
+    value[level] += "J"
+}
+
+buttonItem[56].onclick = function() {
+    value[level] += "K"
+}
+
+buttonItem[57].onclick = function() {
+    value[level] += "L"
+}
+
+buttonItem[58].onclick = function() {
+    value[level] += "M"
+}
+
+buttonItem[59].onclick = function() {
+    value[level] += "N"
+}
+
+buttonItem[60].onclick = function() {
+    value[level] += "O"
+}
+
+buttonItem[61].onclick = function() {
+    value[level] += "P"
+}
+
+buttonItem[62].onclick = function() {
+    value[level] += "Q"
+}
+
+buttonItem[63].onclick = function() {
+    value[level] += "R"
+}
+
+buttonItem[64].onclick = function() {
+    value[level] += "S"
+}
+
+buttonItem[65].onclick = function() {
+    value[level] += "T"
+}
+
+buttonItem[66].onclick = function() {
+    value[level] += "U"
+}
+
+buttonItem[67].onclick = function() {
+    value[level] += "V"
+}
+
+buttonItem[68].onclick = function() {
+    value[level] += "W"
+}
+
+buttonItem[69].onclick = function() {
+    value[level] += "X"
+}
+
+buttonItem[70].onclick = function() {
+    value[level] += "Y"
+}
+
+buttonItem[71].onclick = function() {
+    value[level] += "Z"
+}
+
 setInterval(() => {
     document.getElementById("math-text1").innerText = value[0]
 }, 100);
