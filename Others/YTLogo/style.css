@@ -28,3 +28,7 @@ html {
     left: 160px;
     top: 45px;
 }
+
+.yttra {
+    transform: rotate(90deg);
+}
