@@ -65,6 +65,22 @@ buttonItem[12].onclick = function() {
     value[level] += ")"
 }
 
+buttonItem[13].onclick = function() {
+    value[level] += "+"
+}
+
+buttonItem[14].onclick = function() {
+    value[level] += "-"
+}
+
+buttonItem[15].onclick = function() {
+    value[level] += "/"
+}
+
+buttonItem[16].onclick = function() {
+    value[level] += "*"
+}
+
 setInterval(() => {
     document.getElementById("math-text1").innerText = value[0]
 }, 100);
