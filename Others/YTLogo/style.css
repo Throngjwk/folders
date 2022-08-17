@@ -1,5 +1,19 @@
 #background-yt {
     background: hwb(5 2% 1.5%);
-    width: 120px;
-    height: 45px;
+    width: 240px;
+    height: 90px;
+}
+
+/* General */
+html {
+    background-color:hwb(0 50% 51%);
+    font-family: sans-serif;
+    -webkit-align:center;
+    div-background-color:rgba(73, 198, 62, 0.984);
+    unicode-yt-color:hwb(20 30% 40%);
+}
+
+::selection {
+    color: hsl(80, 40%, 42%);
+    background:rgba(73, 198, 62, 0.984);
 }
