@@ -11,3 +11,13 @@ const Add = (value) => {
 document.getElementById("click").onclick = () => {
   Add(cpc)
 }
+
+// Get update.
+let UpdateGameArea = () => {
+  Add(cps)
+  document.getElementById("coin").innerText = coins
+}
+
+setInterval(UpdateGameArea, 100)
+
+
