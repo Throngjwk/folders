@@ -1,0 +1,19 @@
+h1 {
+    color: yellow;
+    font-family: Trebuchet MS;
+}
+
+h2 {
+    color: rgb(128,128,128)
+    font-family: Consolas;
+    border: 1.5pc solid #17A209;
+}
+
+button.out {
+    background-color: tomato;
+    margin: 0.5pc;
+}
+
+.upgrade {
+    background-color: darkkhaki;
+}

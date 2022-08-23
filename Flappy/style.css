@@ -1,0 +1,42 @@
+.title {
+  color: rgb(128,128,128);
+  text-align: center;
+  display: block;
+}
+
+canvas.canvas {
+  background-color: tomato;
+  margin: 4px;
+}
+
+.text1 {
+  position: absolute;
+  left: 240px;
+  top: 80px;
+  font-size: 51px;
+  font-weight: 500;
+}
+
+.text2 {
+  position:absolute;
+  left: 60px;
+  top:130px;
+  font-size: 40px;
+  font-weight: 404;
+}
+
+div, button {
+  font-family: Monospace;
+  margin: 2vh;
+}
+
+button.local-button {
+  color: darkgray;
+  background-color: rgb(128,128,128);
+  font-family: Segoe UI;
+}
+
+button.global-button {
+  color: yellow;
+  background-color: tomato;
+}

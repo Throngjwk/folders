@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Idling Eater</title>
+<style>
+body {
+  font-family:Arial;
+  background-color:rgb(122, 122, 122);
+  margin:22px;
+  text-align:center !important;
+  align-items:center;
+}
+
+h2, input[type="number"] {
+  color:yellow;
+}
+
+.labelItem {
+  font-size:21px !important;
+  text-shadow:none;
+}
+
+* {
+  text-shadow:1px 2px rgb(22,22,22), 2px 3px hsl(40, 40% 50%);
+  user-select:none;
+}
+
+textarea[type="flipped area"] {
+  transform:rotate(180deg);
+}
+
+button.upgrade, button.upgrade-locked {
+  background-color:#F31A0E;
+}
+
+button.upgrade-unlocked {
+  background-color:#0CFD17;
+}
+</style>
+<head>
+<body>
+<h1>You Passed <span id="meter"></span> Meter.</h1>
+<h2 class="labelItem">Upgrades</h2>
+<button id="upgrader1" class="upgrade">
+<span id="upgTitle1"></span>
+<br>
+<span id="upgCost1"></span>
+<br>
+<span id="upgEffect1"></span>
+</button>
+<button id="upgrader2" class="upgrade">
+<span id="upgTitle2"></span>
+<br>
+<span id="upgCost2"></span>
+<br>
+<span id="upgEffect2"></span>
+</button>
+<button id="upgrader3" class="upgrade">
+<span id="upgTitle3"></span>
+<br>
+<span id="upgCost3"></span>
+<br>
+<span id="upgEffect3"></span>
+</button>
+<h4>v1.0.0 - Created Based game</h4>
+</body>
+</html>
+<script src="js/break_eternity.min.js"></script>
+<script src="js/main.js"></script>

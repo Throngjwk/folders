@@ -1,0 +1,9 @@
+<input type="number" value="0" id="number" />
+<h3 id="doc" title="Click to Add the console.log">Which here!</h3>
+<script>
+  var numberDoc = document.getElementById("number")
+
+  document.getElementById("doc").onclick = () => {
+    console.log(numberDoc.value)
+  }
+</script>

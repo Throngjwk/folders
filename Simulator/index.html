@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simulator</title>
+        <style>
+            h1 {
+                color:rgb(128, 128, 128);
+            }
+            
+            .blue {
+                color:blue;
+            }
+            
+            body{
+                background-color:magenta;
+                margin:12px;
+                font-family:sans-serif;
+            }
+            
+            button {
+                background-color:darkcyan;
+                font-family:monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>You Than <span id="coin">0</span> Coins.</h1>
+        <button onclick="Clicked()">Click Out!</button>
+        <h2 class="blue">Upgrades</h2>
+        <button onclick="buyUpgrade(1)">
+            Cost:<span id="cost1">50</span> Coins.
+        </button>
+        <button onclick="buyUpgrade(2)">Cost:<span id="cost2">2000</span> Coins.</button>
+        <button onclick="buyUpgrade(3)">
+            Cost:<span id="cost3">7200</span> Coins.
+        </button>
+        <button onclick="buyUpgrade(4)">
+            Cost:<span id="cost4">150,000</span> Coins.
+        </button>
+        <button onclick="buyUpgrade(5)">
+            Cost:<span id="cost5">750,000</span> Coins.
+        </button>
+        <button>
+            Cost:<span id="cost6">10 Million</span> Coins.
+        </button>
+        <h2><i>FOREVED HAHA</i></h2>
+        <pre>
+            function buyUpgrade(id) {
+              if (id == 1) {
+                //code
+              }
+            }
+        </pre>
+        <script>
+            var coins = 0
+            var cps = 0
+            var cpc = 1
+            var costs = [50, 2e3, 7.2e3, 1.5e5, 7.5e5, 1e7]
+            
+            function Clicked() {
+                coins += cpc
+            }
+            
+            function buyUpgrade(id) {
+                if (id == 1) {
+                    if (coins >= costs[0]) {
+                        coins -= costs[0]
+                        cps += 2
+                        costs[0] *= 1.2
+                    }
+                }
+                if (id == 2) {
+                    if (coins >= costs[1]) {
+                        coins -= costs[1]
+                        cpc += 10
+                        costs[1] *= 1.2
+                    }
+                }
+                if (id == 3) {
+                    if (coins >= costs[2]) {
+                        coins -= costs[2]
+                        cps += 80
+                        costs[2] *= 1.2
+                    }
+                }
+                if (id == 4) {
+                    if (coins >= costs[3]) {
+                        coins -= costs[3]
+                        cps += 1000
+                        costs[3] *= 1.2
+                    }
+                }
+                if (id == 5) {
+                    if (coins >= costs[4]) {
+                        coins -= costs[4]
+                        cps += 20000
+                        costs[4] *= 1.2
+                    }
+                }
+                if (id == 6) {
+                    if (coins >= costs[5]) {
+                        coins -= costs[5]
+                        cps += 4e5
+                        costs[5] *= 1.2
+                    }
+                }
+            }
+            
+            function UpdateGameArea() {
+                coins += cps
+                document.getElementById("coin").innerText = Math.floor(coins)
+                document.getElementById("cost1").innerText = Math.floor(costs[0])
+                document.getElementById("cost2").innerText = Math.floor(costs[1])
+                document.getElementById("cost3").innerText = Math.floor(costs[2])
+                document.getElementById("cost4").innerText = Math.floor(costs[3])
+                document.getElementById("cost5").innerText = Math.floor(costs[4])
+                document.getElementById("cost6").innerText = Math.floor(costs[5])
+            }
+            
+            setInterval(UpdateGameArea, 100)
+        </script>
+    </body>
+</html>
