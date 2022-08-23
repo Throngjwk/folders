@@ -1,0 +1,22 @@
+h1 {
+    color: azure;
+}
+
+.number {
+    color: hwb(32 30% 40%);
+    font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: hwb(66 35% 40%);
+}
+
+button {
+    background-color: hsl(180, 60%, 50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.upgrade {
+    background-color: hsl(230, 60%, 65%);
+}

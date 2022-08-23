@@ -1,0 +1,1 @@
+a=\operatorname{hsv}\left(\pi+\frac{b}{2}+\left(b_{1}+b_{4}+\left(d_{1}-b_{7}-b_{9}\right)+b_{8}+\cos\left(\sqrt{\frac{b_{1}}{\sqrt{2}}}\right)\cdot\cos\left(\sqrt{2}\right)+\left(\sqrt{b_{2}}-\left(1+\cos\left(b_{3}\right)\right)\right)+\max\left(2\cdot b_{5},\ b_{2}\cdot\cos\left(80+b_{6}\right)\right)\right),\ 0.5+c,\ 0.9\right)

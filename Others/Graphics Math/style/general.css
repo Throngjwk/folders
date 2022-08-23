@@ -1,0 +1,20 @@
+.level-item{
+    font-size: 17.2px;
+    background: hwb(240 25% 50%);
+}
+
+html[lang=en] {
+    background-color: hsla(90, 53%, 45%, 0.849);
+    font-family: Unifont, monospace;
+}
+
+pre {
+    font-family: monospace;
+}
+
+button.math-addiontial-button {
+    background-color: hwb(190 17.5% 30%);
+    font-family: Unifont, monospace;
+    border: none;
+    margin: 3.35pt;
+}

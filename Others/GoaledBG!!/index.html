@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::marker { 
+  color: red;
+  font-size: 23px;
+  display:grid;
+  align-items:center;
+}
+
+::marker:hover {
+  color:rgb(133, 133, 133);
+}
+
+li:hover {
+  animation:mymove 1s infinite;
+}
+
+@keyframes mymove {
+  0% {
+    color:yellow;
+  }
+  100% {
+    color:pink;
+  }
+}
+
+ol {
+  margin:3px;
+  font-family:monospace;
+}
+
+ol:hover {
+  font:bold 20px sans-serif;
+  animation:mymove 1s infinite;
+}
+
+ol.blue-marker {
+  background:blue;
+}
+
+body {
+ background:#220917;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ width:50pc;
+ height:50pc;
+ margin:17px;
+ margin-top:11px;
+}
+
+html {
+  color:white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+<ol class="blue-marker">
+  <li>My Order</li>
+  <li>My Second Order</li>
+</ol>
+
+</body>
+</html>
