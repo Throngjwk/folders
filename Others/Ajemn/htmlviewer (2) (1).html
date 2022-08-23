@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Location</title>
+        <style>
+            .content .ground {
+                background:linear-gradient(to right, #000046, #1cb5e0);
+                color:rgb(133, 133, 133);
+                box-shadow: 3px 3px 6px 0px rgba(203, 145, 35, 1), 4px 4px 6px 0px rgba(217, 170, 82, 1), 5px 5px 6px 0px rgba(170, 161, 36, 1), inset 6px 6px 6px 0px rgba(202, 196, 111, 1), inset 7px 7px 6px 0px rgba(189, 181, 67, 1), inset 8px 8px 6px 0px rgba(189, 181, 67, 1), inset 9px 9px 6px 0px rgba(238, 227, 69, 1), inset 10px 10px 6px 0px rgba(101, 110, 22, 1), inset 11px 11px 6px 0px rgba(148, 203, 18, 1), inset 12px 12px 6px 0px rgba(196, 229, 48, 1), inset 13px 13px 6px 0px rgba(153, 214, 42, 1), inset 14px 14px 6px 0px rgba(155, 228, 50, 1), inset 15px 15px 6px 0px rgba(134, 191, 52, 1), inset 16px 16px 6px 0px rgba(82, 119, 28, 1), inset 17px 17px 6px 0px rgba(81, 121, 24, 1), inset 18px 18px 6px 0px rgba(154, 201, 87, 1), inset 19px 19px 6px 0px rgba(155, 246, 24, 1), inset 20px 20px 6px 0px rgba(100, 221, 31, 1), inset 21px 21px 6px 0px rgba(48, 223, 25, 1), inset 22px 22px 6px 0px rgba(89, 210, 19, 1), inset 23px 23px 6px 0px rgba(71, 199, 28, 1), inset 24px 24px 6px 0px rgba(108, 180, 66, 1), inset 25px 25px 6px 0px rgba(131, 200, 91, 1), inset 26px 26px 6px 0px rgba(89, 210, 19, 1), inset 27px 27px 6px 0px rgba(89, 210, 19, 1), inset 28px 22px 6px 0px rgba(95, 186, 36, 1), inset 29px 29px 6px 0px rgba(193, 235, 168, 1), inset 30px 30px 6px 0px rgba(50, 119, 10, 1), inset 31px 31px 6px 0px rgba(136, 202, 98, 1), inset 32px 32px 6px 0px rgba(89, 210, 19, 1), inset 32px 32px 6px 0px rgba(88, 218, 110, 1), inset 34px 34px 6px 0px rgba(75, 176, 75, 1), inset 35px 35px 6px 0px rgba(139, 189, 109, 1), inset 36px 36px 6px 0px rgba(79, 167, 53, 1), inset -2px -2px 6px 0px rgba(64, 181, 29, 1), inset -3px -3px 6px 0px rgba(152, 236, 127, 1), inset -4px -4px 6px 0px rgba(115, 192, 92, 1), inset -5px -5px 6px 0px rgba(82, 208, 45, 1), inset -6px -6px 6px 0px rgba(108, 215, 77, 1), inset -7px -7px 6px 0px rgba(152, 236, 127, 1), inset -8px -8px 6px 0px rgba(69, 123, 53, 1), inset -9px -9px 6px 0px rgba(79, 208, 111, 1), inset -10px -10px 6px 0px rgba(101, 204, 71, 1);
+                width:520px;
+                height:320px;
+                text-align:center;
+                display:grid;
+                align-items:center;
+            }
+            
+            .content .hello-world-anim {
+                color:lightcyan;
+                background:yellow;
+                margin:calc(2.5% - 4px);
+                animation:anim1 2s infinite;
+                font-size:40px;
+                display:grid;
+                justify-content:center;
+            }
+            
+            @keyframes anim1 {
+                0% {
+                    box-shadow: 6px 6px 7px 2px rgba(36, 36, 36, 0.45);
+                    height:200px;
+                }
+                100% {
+                    box-shadow: 6px 6px 7px 5px rgba(36, 36, 36, 0.45);
+                    height:222px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="ground">
+                <h1>
+                    Hello World!
+                </h1>
+            </div>
+            <div class="hello-world-anim">
+                <p class="big">Hello World!</p>
+            </div>
+        </div>
+    </body>
+</html>
