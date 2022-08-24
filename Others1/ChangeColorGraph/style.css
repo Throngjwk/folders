@@ -1,0 +1,14 @@
+h1 {
+    color: aqua;
+}
+
+div {
+    border: 7px solid black;
+    width: 380px;
+    height: 380px;
+}
+
+resource-data::before {
+    content: attr(data);
+    font-family: sans-serif;
+}
