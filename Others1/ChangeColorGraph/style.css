@@ -8,4 +8,7 @@ div {
     height: 380px;
 }
 
-resource-
+resource-data::before {
+    content: attr(data);
+    font-family: sans-serif;
+}
